@@ -10,3 +10,17 @@ JQuery 2.x
 
 ## version
 Current version is 1.5 and it straps JQuery for its JS layer, and Foundation for its visual skin.
+
+## build tools
+We use nodejs, bower and grunt for building. So please do install bower, nodejs and grunt.
+
+## project bootstraping
+1. Clone or checkout the template folder to be your source.
+2. Inside your source folder, type 'npm install' in the command line to install all the node modules.
+3. Type 'grunt' and this will create a 'build' folder with the minified files and folder. It will also bring up 'grunt-watch' and start to listen to any file changes to trigger a rebuild.
+4. You can now go inside your browser on your mobile or chrome and type 'http://localhost:1777/' where localhost is your computer's IP address to test your site.
+5. Edit and repeat the process.
+
+## template structure
+
+TBD  
