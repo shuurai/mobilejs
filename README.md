@@ -1,3 +1,5 @@
+ლ(́◉◞౪◟◉‵ლ) BANSAI!
+
 # mobilejs bootstrap
 A quick hybrid app ready bootstrap designed to help prototyping mobile apps quickly. The project here is designed not to replace complete web frameworks. It is more about about speeding up the process of getting a templated app structure ready where you can add a quick mobile friendly page with quick javascript tie ins. 
 
