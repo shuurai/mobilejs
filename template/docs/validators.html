@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - Validators</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - Validators</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>...</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">Validators <i class="fi-star"></i></h1>
+                        <h3 class="subheader">Example<a id="example"></a></h3>
+                        <p><strong>How to Enable Validation</strong></p>
+                        <p>For any form that requires validation, simply follow the following steps:</p>
+                        <ol>
+                            <li>At <strong>`init`</strong> function of the control, add `<code class="language-javascript">this.inputs = []</code>`.</li>
+                            <li><p>Add the following line:</p>`<code class="language-javascript">addFormElement(this.inputs, 'fName', 'letter', 1, 'Please enter a valid first name.', ">=", null, this.element)</code>`
+                            </li>
+                            <li>
+                                <p>The function takes in the array of inputs from step 1, the `name` of the field, the validation type of the field, comparison limit, error message, comparator, a data field, and the parent element where this input resides.</p>
+                                <p>Due to the way the views and elements are constructed, it is important to create the relevant form element inside the <strong>`control.options`</strong>.
+                                <code class="language-javascript">
+   fName: {
+        name: "fName",
+        label: "Last Name",
+        infoIconId: null,
+        inputType: "text",
+        value: "",
+        placeholder: "",
+        inputClass: "",
+        pattern: null
+    },
+                                </code></p>
+                                <p>Please note that, the `inputType` here is the actual attribute of the input, and is not the same as the validation type.</p>
+                            </li>
+                            <li>It is also important to do `<code class="language-javascript">populateFormValues(this.element, this.inputs, formValues["step" + currentStep])</code>` so that when this step is revisited, the values can be populated back again.</li>
+                            <li>Please feel free to study these functions to understand the logic used.</li>
+                        </ol>
+
+                        <h3>Input Validators<a id="list"></a></h3>
+                        <p>Validation logic is coded inside the `invalidateForm()` function in the `common.js` file. An example validation type is `letter` as shown above. Feel free to add additional input validators as needed.</p>
+
+                        <p>It is important to add the `this.element` at the end of addFormElement function as it initialises the `clear` button and other listening functionalities. Some form elements like legal, radio and checkbox does not care that much about this argument.</p>
+
+                        <p>Supported validation types are:</p>
+                        <ol>
+                           <li>
+                               <p><strong>`passwordStrength`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'password', 'passwordStrength', 6, 
+    'Please enter a 6 character password with at least one capital letter, a number and a none alphanumeric character.', 
+    null, null, this.element);</code>
+                                </blockquote>
+                                <p>Default system wide min strength is a score of 75 or more. Anything below 75 is considered weak, around 80 is medium and above 95 is strong. Feel free to update the logic as you see fit inside <strong>`analysePasswordScore()`</strong> function. Please note that, we need the score to update the strength indicator.</p>
+                           </li>
+                           <li>
+                               <p><strong>`stringCompare`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'password2', 
+    'stringCompare', 1, 
+    'Please enter a valid confirm password.', 
+    null, 'password', this.element);
+                                    </code>
+                                </blockquote>
+                                <p>StringCompare compares two input fields and can be used for things like <strong>`Confirm Password`</strong>.</p>
+                           </li>
+                           <li>
+                               <p><strong>`dateCompare`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'dob', 'dateCompare', -365*18, "Please enter a valid date", '<=');</code>
+                                </blockquote>
+                                <p>This makes sure that the user is at least 18 years old.</p>
+                           </li>
+                           <li>
+                               <p><strong>`hidden`</strong></p>
+                               <p>A hidden type input is just treated as normal textfield and its value not modified since it is hidden.</p>
+                           </li>
+                           <li>
+                               <p><strong>`textarea`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'comments', 'textarea', 5, 
+  "Please enter some text!", 
+  null, null, this.element);</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`text`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'renewalNo', 'text', 5, 
+  "Please enter valid renewal number.", 
+  null, null, this.element);</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`letter`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'fName', 'letter', 1, 
+    'Please enter a valid first name.', 
+    ">=", null, this.element);</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`mobile`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'mobile', 'mobile', 1, 
+    'Please enter a valid mobile number.', 
+    null, null, this.element);</code>
+                                </blockquote>
+                                <p>The limit number field <strong>`1`</strong> and the comparator string "==" can be anything for this as inputType <strong>`mobile`</strong> uses regex.</p>
+                           </li>
+                           <li>
+                               <p><strong>`number`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'cardNumber', 'number', 16, 
+  "Please enter a valid card number.", 
+  "===", null, this.element);</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`email`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'email', 'email', 1, 
+    'Please enter a valid email address.', 
+    null, null, this.element);</code>
+                                </blockquote>
+                                <p>The limit number field <strong>`1`</strong> and the comparator string can be anything for this as inputType <strong>`email`</strong> uses regex.</p>
+                           </li>
+                           <li>
+                               <p><strong>`date`</strong> and <strong>`dob`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'dob', 'date', 8, 
+    "Please enter a valid date.");</code>
+                                </blockquote>
+                                <p>The limit number field <strong>`8`</strong> can be disregarded. There is no difference between using <strong>`dob`</strong> or <strong>`date`</strong>.</p>
+                           </li>
+                           <li>
+                               <p><strong>`checkbox`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'legal', 'checkbox', 1, 
+  "Please make a selection.");</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`radio`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, currentQuestion.attr('miscQuestionId'), 'radio', 1, 
+  "Please select your answer.");</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`legal`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'legal', 'legal', 1, 
+  "Please agree to our t and c.");</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`select`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'duration', 'select', 1, 
+    "Please select correctly.");</code>
+                                </blockquote>
+                                <p>The select validator just makes sure that the selected value is not `NA` or empty.</p>
+                           </li>
+                           <li>
+                               <p><strong>`month`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'expMonth', 'month', 1, 
+  "Please select your expiry month.");</code>
+                                </blockquote>
+                           </li>
+                           <li>
+                               <p><strong>`year`</strong></p>
+                               Example: 
+                                <blockquote>
+                                    <code class="language-javascript">addFormElement(this.inputs, 'expYear', 'year', 1, 
+  "Please select your expiry year.");</code>
+                                </blockquote>
+                           </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _product.scss
+Version: 1.0
+
+Description:
+CSS specific for the products related screens. Please prefix with dg-product.
+*/
+
+/* Variables */
+
+/* The setup feature top class */
+.dg-product {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-product .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The licence summary view classes start */
+.dg-product .dg-psummary {
+    padding: 0;
+}
+/* The licence summary view classes end */
+
+/* The licence summary top stretch view classes start */
+.dg-psummary .dg-top-stretch {
+    padding: $dg-column-gutter;
+    border-bottom: 1px solid $dg-divider-on-white-color;
+    background-color: $dg-backing-light-color;
+    padding-bottom: 0;
+}
+
+.dg-psummary .dg-profile-subtitle-value {
+    color: $body-font-color;
+}
+
+.dg-psummary .dg-profile-top {
+    margin-bottom: 1rem;
+}
+
+.dg-psummary .dg-profile-icon {
+    margin-top: rem-calc(4);
+    height: 40px;
+    width: 40px;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+}
+    
+@media #{$medium-up} { 
+    .dg-psummary .dg-profile-icon {
+        margin-top: rem-calc(4);
+        font-size: 55px;
+        line-height: 55px;
+        height: 55px;
+        width: 55px;
+        background-size: 55px 55px;
+        background-repeat: no-repeat;
+    }
+}
+
+.dg-psummary .dg-profile-title {
+    margin-bottom: 0;
+}
+
+.dg-psummary .dg-profile-subtitle {
+    color: $dg-sub-header-color;
+    font-size: rem-calc(14);
+    line-height: $form-label-line-height;
+}
+
+.dg-psummary .dg-profile-value {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: rem-calc(18);
+    margin-bottom: 1rem;
+}
+
+.dg-psummary .dg-actions {
+    padding: $dg-column-gutter;
+}
+/* The licence summary top stretch view classes end */
+
+/* The update view classes start */
+.dg-product .dg-pupdate, .dg-product .dg-pupdateaddress, .dg-product .dg-pupdatecontacts {
+    padding: $dg-column-gutter;
+}
+/* The update view classes end */

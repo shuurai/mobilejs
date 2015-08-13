@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+	
+    <title>Mobile JS</title>
+    <link href="css/foundation-icons.min.css" rel="stylesheet">
+    <link href="css/app.min.css" rel="stylesheet">
+    <link href="vendor/iCheck/skins/square/red.css" rel="stylesheet">
+    <script src="vendor/modernizr/modernizr.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+
+<body>    
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div id="dg-overall-wrapper" class="inner-wrap"></div>
+    </div>
+<script type='text/ejs' id='autoAddressDropDownEJS'>
+    <div id="dg-qas-list">
+        <% if(!can.isEmptyObject( addressList )) { %>
+            <% list(addressList, function( addressObj ){ %>
+                <strong><a href="#" name="<%= addressObj.attr('uniqueID') %>"><%= addressObj.attr('displayText') %></a></strong><br/>
+            <% }); %>
+        <% }; %>
+    </div>
+</script>
+
+<script type='text/ejs' id='autoAddressInputEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+	<label><%= toUpper(label) %></label>
+
+	<div class="dg-input-clear-button" href="#"><i class="fi-x fi-size-large"></i></div><input class="<%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="text" autocomplete="off">
+
+    <p class="panel dg-qas-dropdown"></p>
+</script>
+
+<script type='text/ejs' id='autoAddressEJS'>
+    <div class="row" id="dg-auto-block">
+        <div class="columns">
+            <%== can.view.render('autoAddressInputEJS', this.form.attr('fullAddress') ); %>
+        </div>
+    </div>
+    <div class="row" id="dg-manual-block">
+        <div class="large-12 columns">
+            <%== can.view.render('textInputEJS', this.form.attr('addressLine1') ); %>
+        </div>
+        <div class="large-12 columns">
+            <%== can.view.render('textInputEJS', this.form.attr('addressLine2') ); %>
+        </div>
+        <div class="large-6 columns">
+            <%== can.view.render('textInputEJS', this.form.attr('addressSuburb') ); %>
+        </div>
+        <div class="large-6 columns">
+            <%== can.view.render('textInputEJS', this.form.attr('addressPostcode') ); %>
+        </div>
+        <div class="large-12 columns">
+            <%== can.view.render('selectInputEJS', this.form.attr('addressState') ); %>
+        </div>
+        <div class="large-12 columns">
+            <%== can.view.render('submitButtonEJS', this.form.attr('reset') ); %>
+        </div>
+    </div>
+</script>
+<script type='text/ejs' id='checkBoxEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+    <% if(this.attr('labelTop')) { %>
+        <label><%== labelTop %></label>
+    <% } %>
+    <input type='checkbox' name='<%= name %>' value="<%= value %>" id="<%= id %>" class="<%= inputClass %>" <%== checked %> />
+    <label class="dg-check-label" for="<%= id %>"><%== label %></label>
+</script>
+<script type='text/ejs' id='dateInputEJS'>
+    <div class="row collapse">
+    	<%== can.view.render('infoIconEJS', this); %>
+        <label><%= toUpper(label) %></label>
+        <div class="small-11 columns">
+            <input class="<%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="date" autocomplete="off" min="1900-01-01">
+        </div>
+        <div class="small-1 columns">
+            <span class="postfix"><i class="fi-calendar fi-size-medium"></i></span>
+        </div>
+    </div>
+</script>
+<script type='text/ejs' id='dobInputEJS'>
+    <div class="row collapse">
+    	<%== can.view.render('infoIconEJS', this); %>
+        <label><%= toUpper(label) %></label>
+        <div class="small-11 columns">
+            <input class="<%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="date" autocomplete="off" min="1900-01-01">
+        </div>
+        <div class="small-1 columns">
+            <span class="postfix"><i class="fi-calendar fi-size-medium"></i></span>
+        </div>
+    </div>
+</script>
+<script type='text/ejs' id='infoIconEJS'>
+	<% if(this.attr('infoIcon')) { %>
+	    <a href="#" class="dg-info-icon" id="<%= this.attr('id') %>"><i class="<%= infoIcon %>"></i> <%= (this.attr('infoIconText'))?this.attr('infoIconText'):"" %></a>
+	<% } else if(this.attr('infoIconText')) { %>
+	    <a href="#" class="dg-info-text" id="<%= this.attr('id') %>"><%= (this.attr('infoIconText'))?this.attr('infoIconText'):"" %></a>
+	<% } %>
+</script>
+<script type='text/ejs' id='pagetitleEJS'>
+    <div class="dg-pagetitle">
+        <% if(this.attr('hideSuperTitle') === false) { %>
+            <h4 class="dg-subtitle"><%= this.attr('superTitle') %></h4>
+        <% } %>
+        <% if(this.attr('showTitle') === true) { %>
+            <h2 class="dg-maintitle"><%= toUpper(this.attr('title')) %></h2>
+        <% } %>
+        <% if(this.attr('showAgency') == true) { %>
+            <a class="agency_icon" href="#" id="agency_info"></a>
+        <% } %>
+    </div>
+</script>
+<script type='text/ejs' id='passwordEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+	<label><%= toUpper(label) %></label>
+    <div class="dg-input-clear-button" href="#"><i class="fi-x fi-size-large"></i></div><input class="dg-password-input <%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="<%= (this.attr('inputType') != null)?this.attr('inputType'):'text' %>" <%= (this.attr('pattern') != null)?'pattern="'+this.attr('pattern')+'"':'' %> autocomplete="off">
+    <div class="dg-password-block dg-password-empty">
+    	<div class="<%= iconClass %>"></div><div class="dg-password-text"></div>
+    </div>
+</script>
+<div id="dg-global-modal" class="reveal-modal" data-reveal>
+	<div class="dg-popup-wrapper">
+		<h2 id="dg-popup-heading"></h2>
+		<section id="dg-popup-content"></section>
+		<a class="close-reveal-modal">&#215;</a>
+	</div>
+</div>
+<script type='text/ejs' id='searchBarEJS'>
+    <div class="dg-searchbar">
+        <div class="medium-4 small-4 columns">
+            <a href="#" class="button secondary small expand dg-searchbar-button"><i class="fi-plus"></i>  Link</a>
+        </div>
+        <div class="dg-searchbar-input-wrapper medium-8 small-8 columns">
+            <input class="dg-searchbar-input" type="text" placeholder="Search my products">
+        </div>
+    </div>
+</script>
+<script type='text/ejs' id='searchaaBarEJS'>
+</script>
+<script type='text/ejs' id='selectInputEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+    <label for="<%= name %>"><%= toUpper(label) %></label>
+    <select class="<%= inputClass %>" title="<%= name %>" name="<%= name %>">
+        <% if(!can.isEmptyObject( selections )) { %>
+            <% list(selections, function( item, index ){ %>
+                <option value="<%= item.attr('value') %>" <%= (item.attr('value') == selected) ? "selected":"" %>><%= item.attr('label') %></option>
+            <% }); %>
+        <% }; %>
+    </select>
+</script>
+<script type='text/ejs' id='splashErrorEJS'>
+    <div data-alert="" class="alert-box alert dg-splash-error">
+    	<%= errorMessage %>
+        <a href="#" class="close">×</a>
+    </div>
+</script>
+<script type='text/ejs' id='submitButtonEJS'>
+    <input type="button" name="<%= name %>" title="<%= (this.attr('title'))?this.attr('title'):value %>" class="<%= inputClass %> button" value="<%= value %>">
+</script>
+<script type='text/ejs' id='textAreaEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+	<label for="<%= name %>"><%= toUpper(label) %></label>
+	<textarea rows="<%= rows %>" cols="<%= cols %>" name="<%= name %>" type="text"></textarea>
+</script>
+<script type='text/ejs' id='textInputEJS'>
+    <%== can.view.render('infoIconEJS', this); %>
+	<label><%= toUpper(label) %></label>
+
+	<div class="dg-input-clear-button" href="#"><i class="fi-x fi-size-large"></i></div><input class="<%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="<%= (this.attr('inputType') != null)?this.attr('inputType'):'text' %>" <%= (this.attr('pattern') != null)?'pattern="'+this.attr('pattern')+'"':'' %> autocomplete="off">
+</script>
+<script type='text/ejs' id='textInputRightIconEJS'>
+    <div class="row collapse">
+        <%== can.view.render('infoIconEJS', this); %>
+        <label><%= toUpper(label) %></label>
+        <div class="small-11 columns">
+            <div class="dg-input-clear-button dg-input-clear-button-columned" href="#"><i class="fi-x fi-size-large"></i></div><input class="<%= inputClass %>" placeholder="<%= placeholder %>" name="<%= name %>" value="<%= (this.attr('value') != null)?this.attr('value'):'' %>" type="<%= (this.attr('inputType') != null)?this.attr('inputType'):'text' %>" <%= (this.attr('pattern') != null)?'pattern="'+this.attr('pattern')+'"':'' %> autocomplete="off">
+        </div>
+        <div class="small-1 columns">
+            <span class="postfix"><i class="<%= iconClass %>"></i></span>
+        </div>
+    </div>
+</script>
+<script type='text/ejs' id='topbarGuestEJS'>  
+    <!-- nav class="top-bar docs-bar hide-for-small" data-topbar="">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#"><%= this.attr('logoTitle') %></a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+                <li class="divider"></li>
+                <li class="has-dropdown not-click">
+                    <a href="#" class="">GET STARTED</a>
+                    <ul class="dropdown">
+                        <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+                        <li><a href="#"><%= toUpper(getStr('DREGISTER')) %></a></li>
+                        <li><a href="#"><%= toUpper(getStr('DLOGIN')) %></a></li>
+                        <li><a href="#">RENEW A LICENCE</a></li>
+                        <li><a href="#">NEW FISHING LICENCE</a></li>
+                        <li><a href="#">UPDATE LICENCE DETAILS</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="has-dropdown not-click">
+                    <a href="#" class="">ABOUT</a>
+                    <ul class="dropdown">
+                        <li class="title back js-generated"><h5><a href="javascript:void(0)">Back</a></h5></li>
+
+                        <li><a href="#"><%= toUpper(getStr('C017')) %></a></li>
+                        <li><a href="#"><%= toUpper(getStr('C018')) %></a></li>
+                        <li><a href="#"><%= toUpper(getStr('C019')) %></a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="has-form">
+                    <a href="#" class="small button"><%= toUpper(getStr('DLOGIN')) %></a>
+                </li>
+            </ul>
+        </section>
+    </nav -->
+    <div class="dg-sticky-top">
+        <nav class="tab-bar">
+            <% if(leftBtnString !== '') { %>
+                <section class="dg-left-small">
+                    <a class="fi-arrow-left fi-size-medium dg-back-icon" href="#"><span></span></a>
+                </section>
+            <% } %>
+            <% if(this.attr('hideLogo') === false) { %>
+                <section class="middle tab-bar-section">
+                    <h1 class="dg-topbar-logo"></h1>
+                </section>    
+            <% } else { %>
+                <section class="middle tab-bar-section">
+                    <h1 class="title"><%= this.attr('logoTitle') %></h1>
+                </section>    
+            <% } %>
+
+            <% if(rightBtnClass === 'menuIcon') { %>
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span><%= rightBtnString %></span></a>
+                </section>
+            <% } else if(rightBtnClass === 'homeIcon') { %>
+                <section class="dg-right-small">
+                    <a class="fi-home fi-size-medium dg-right-icon" href="#"><span><%= rightBtnString %></span></a>
+                </section>
+            <% } else if(rightBtnClass === 'unlinkIcon') { %>
+                <section class="dg-right-small">
+                    <a class="fi-unlink fi-size-medium dg-right-icon" href="#"><span><%= rightBtnString %></span></a>
+                </section>
+            <% } else if(rightBtnClass === 'exitIcon') { %>
+                <section class="dg-right-small">
+                    <a class="fi-power fi-size-medium dg-right-icon" href="#"><span><%= rightBtnString %></span></a>
+                </section>
+            <% } else if(rightBtnClass !== '') { %>
+                <section class="dg-right-small">
+                    <a class="<%== rightBtnClass %> fi-size-medium dg-right-icon" href="#"><span><%= rightBtnString %></span></a>
+                </section>
+            <% } %>
+        </nav>
+    </div>
+</script>
+<script type='text/ejs' id='dateWidgetEJS'>
+    <div id="popup">
+        <div class="canvas"></div>
+        <div class="popup_content">
+            <h1><img class="popup_header_icon" src="/Content/img/cal_icon.png" />Select a date</h1>
+            <table class="styled_table">
+                <tr>
+                    <td class="selection_cell">
+                        <a class="toggle_top_button" id="day_plus" href="#">+</a>
+                        <div class="toggle_value" id="day_value"><%= this.selectedDate.attr('selectedDay') %></div>
+                        <a class="toggle_bottom_button" id="day_minus" href="#">-</a>
+                    </td>
+                    <td class="selection_cell">
+                        <a class="toggle_top_button" id="month_plus" href="#">+</a>
+                        <div class="toggle_value" id="month_value"><%= this.selectedDate.attr('selectedMonth') %></div>
+                        <a class="toggle_bottom_button" id="month_minus" href="#">-</a>
+                    </td>
+                    <td class="selection_cell">
+                        <a class="toggle_top_button" id="year_plus" href="#">+</a>
+                        <div class="toggle_value" id="year_value"><%= this.selectedDate.attr('selectedYear') %></div>
+                        <a class="toggle_bottom_button" id="year_minus" href="#">-</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=3 class="day_label_cell">&nbsp;</td>
+                </tr>
+            </table>
+            <div class="half_left_button"><a name="cancel" href="#">CANCEL</a></div>
+            <div class="half_right_button"><a name="accept" href="#">ACCEPT</a></div>
+        </div>
+    </div>
+</script>
+
+<!-- Form EJS Elements Start -->
+
+<script type='text/ejs' id='radioEJS'>
+    <div class="btn-radio-container">
+        <% this.each(function( radioObj, key ) { %>
+            <% if(!can.isEmptyObject( radioObj )) { %>
+                <div class="btn-radio">
+                    <input type="radio" name="<%= radioObj.attr('name') %>" value="<%= radioObj.attr('value') %>" id="<%= radioObj.attr('id') %>" class="<%= radioObj.attr('inputClass') %>" />
+                    <label for="<%= radioObj.attr('id') %>"><%= radioObj.attr('label') %></label>
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+</script>
+
+<script type='text/ejs' id='selectInputGroupEJS'>
+    <div class="ie-select">
+        <select class="<%= inputClass %>" title="<%= name %>" id="<%= id %>" name="<%= name %>">
+            <% if(!can.isEmptyObject( selections )) { %>
+            <% list(selections, function( item, index ){ %>
+            <option value="<%= item.attr('value') %>"<%= (item.attr('value') == selected) ? "selected":"" %>><%= item.attr('label') %></option>
+            <% }); %>
+            <% }; %>
+        </select>
+    </div>
+</script>
+
+<!-- Form EJS Elements End -->
+    <script src="vendor/requirejs/require.js" data-main="js/app_packaged.min"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _home.scss
+Version: 1.0
+
+Description:
+CSS specific for the home screen. Please prefix with dg-home.
+*/
+
+/* Variables */
+
+/* The home feature top class */
+.dg-home {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-home .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The landing view classes start */
+.dg-home .dg-landing {
+    padding: 0;
+    //min-height: $dg-min-height;
+}
+
+.dg-landing .dg-landing-menu {
+    padding: $dg-column-gutter;
+    padding-right: 50%;
+    display: block;
+    cursor: pointer;
+}
+
+.dg-landing .dg-landing-menu a h2 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.dg-landing .dg-landing-menu a h4 {
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.dg-landing .dg-landing-menu:hover {
+    opacity: $dg-hover-opacity;
+}
+
+.dg-landing .dg-landing-banner {
+    background: #e5e9eb url(../img/home/phone2.png) no-repeat 135% 0%;
+    min-height: rem-calc(220);
+}
+
+.dg-landing .dg-landing-banner a h2, .dg-landing .dg-landing-banner a h4 {
+    color: $header-font-color;
+}
+
+.dg-landing .dg-landing-renew {
+    background: #ed6a56 url(../img/home/renew.png) no-repeat 95% 50%;
+    min-height: $dg-menu-height;
+}
+
+.dg-landing .dg-landing-fish {
+    background: #40b6e5 url(../img/home/fishing.png) no-repeat 95% 50%;
+    min-height: $dg-menu-height;
+}
+
+.dg-landing .dg-landing-update {
+    background: #b5e147 url(../img/home/apply.png) no-repeat 95% 50%;
+    min-height: $dg-menu-height;
+}
+
+.dg-landing .dg-landing-footer {
+    padding: $dg-column-gutter;
+    background-color: $clearing-bg;
+}
+
+.dg-landing .dg-landing-footer .dg-footer-link {
+    position: absolute;
+    margin-left: rem-calc(55);
+    margin-top: rem-calc(5);
+}
+
+.dg-landing .dg-landing-footer a.dg-footer-link {
+    color: $tabbar-menu-icon-color;
+}
+
+.dg-landing .dg-landing-footer a.dg-footer-link:hover {
+    color: $tabbar-menu-icon-hover;
+}
+/* The landing view classes end */
+
+/* The about view classes start */
+.dg-home .dg-about, .dg-home .dg-privacy {
+    padding: $dg-column-gutter; 
+}
+/* The about view classes end */
+
+/* The contact view classes start */
+.dg-home .dg-contact {
+    padding: $dg-column-gutter; 
+}
+/* The contact view classes end */
+
+/* The services view classes start */
+.dg-home .dg-services {
+    padding: $dg-column-gutter; 
+}
+/* The services view classes end */
+
+@media #{$medium-up} { 
+    .dg-landing .dg-landing-banner {
+        background: #e5e9eb url(../img/home/phone2.png) no-repeat 100% 0;
+        min-height: rem-calc(220);
+    }
+}

@@ -1,0 +1,72 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _feedback.scss
+Version: 1.0
+
+Description:
+CSS specific for the feedback screens. Please prefix with dg-feedback.
+*/
+
+/* Variables */
+
+/* The setup feature top class */
+.dg-feedback {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-feedback .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The fb start view classes start */
+.dg-feedback .dg-start {
+    padding: $dg-column-gutter; 
+}
+
+.dg-start .dg-smilies {
+	text-align: center;
+}
+
+.dg-start .dg-smilies a {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+a .dg-happy-face {
+    width: 51px;
+	height: 51px;
+	display: inline-block;
+    background: url(../img/smilies_happy_small.png) no-repeat 0 0;
+}
+
+a .dg-normal-face {
+    width: 51px;
+	height: 51px;
+	display: inline-block;
+    background:url(../img/smilies_average_small.png) no-repeat 0 0;
+}
+
+a .dg-sad-face {
+    width: 51px;
+	height: 51px;
+	display: inline-block;
+    background:url(../img/smilies_sad_small.png) no-repeat 0 0;
+}
+
+a .on {
+    background-position: 0 -53px;
+}
+
+
+/* The fb start view classes end */
+
+// The fb thanks view class
+.dg-feedback .dg-thanks {
+    padding: $dg-column-gutter; 
+}

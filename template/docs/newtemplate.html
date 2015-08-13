@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - How To Add New Template</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - How To</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>`null` problems can break the loading of a template.</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">How To <i class="fi-book"></i></h1>
+                        <h3 class="subheader">EJS/TPL Templates<a id="newfeature"></a></h3>
+                        <p>
+                            All tpls are common snippets in the form a EJS with the exception of <strong>`popupEJS.tpl`</strong>, and gets compiled as part of the "index.html" file when built using grunt. Tpl files in the <strong>`tpl/*`</strong> folder gets picked up and compiled automatically. Tpls are usually used for things that are common and needed all the time, and for other things that is better to be loaded lazily or dynamically, they are stored in the <strong>`ejs/*`</strong> folder and seperated by their type.
+                        </p>
+                        <p>
+                            To understand more about EJS templates, please see the official <a href="http://embeddedjs.com/">[embeded.js]</a> website and <a href="http://canjs.com/">[can.js]</a> about how they are integrated.
+                        </p>
+                        
+                        <h5>How to Add a New `.TPL` Template</h5>
+                        <p>TPLs should mostly contain the EJS script tags. Imagine this is part of an html file just split up. The <strong>`popupEJS`</strong> is a peculiaer case due to the way foundation's reveal canvas is designed. TPLs are generally html embedded EJS templates.</p>
+                        <p>Please follow the steps below to understand and learn the process of adding a new standard <strong>`tpl`</strong> file and how to use it.</p>
+                        <ol>
+                            <li>Create the tpl file inside <strong>`tpl/common/`</strong> and make sure it is suffixed with <strong>`EJS`</strong>.</li>
+                            <li>Make sure the EJS name in the script tag <strong>`&lt;script type=&#39;text/ejs&#39; id=&#39;newTplEJS&#39;&gt;`</strong> is the same as the file name to be consistent.</li>
+                            <li>The file will be automatically picked up by grunt and is now available for use throughout the system.</li>
+                        </ol>
+                        <p>A key concept for most tpl widgets is that, a <strong>`content`, `form` and `data`</strong> attributes are available for use in any EJS script tags. These objects are usually passed in at the time of instantiation. Of course depending on the nature of this tpl widget, the passed in attributes can be different.</p>
+                        
+                        <h5>How to Add a New `.EJS` Template</h5>
+                        <p>`.ejs` files are specific to features. They are external EJS templates for dynamic and as required loading. </p>
+                        <p>Please follow the steps below to understand and learn the process of adding a new standard `ejs` file and how to use it.</p>
+
+                        <ol>
+                            <li>Create the EJS file inside <strong>`ejs/[featurename]/`</strong> and make sure it has the same name as the corresponding feature's page.</li>
+                            <li>Make sure the EJS file does not have the the script tag like <strong>`&lt;script type=&#39;text/ejs&#39; id=&#39;newTplEJS&#39;&gt;`</strong> as it is not required for externally loaded files.</li>
+                            <li>The file will be coded in its relevant feature to be loaded when required.</li>
+                        </ol>
+                        <p>EJS templates are dependant on feature implementations so please read about <a href="newfeature.html">features</a> for more information.</p>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

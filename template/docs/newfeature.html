@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - How To Add New Feature</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - How To</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>...</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">How To <i class="fi-lightbulb"></i></h1>
+                        <h3 class="subheader">Add New Feature<a id="newfeature"></a></h3>
+                        <p>
+                            A <strong>`feature`</strong> is in essence very much like a <strong>`controller`</strong> in a typical MVC based application. It has been decided to be called a feature because this app is frontend oriented and we want the divisions of sections to be semantically more meaningful where as a controller in a typical backend-frontend environment, could be purely for functional purposes.
+                        </p>
+                        <p>
+                            A <strong>`page`</strong> is in essence very much like a <strong>`view`</strong> in a typical MVC based application.
+                        </p>
+                        <p class="panel callout round"><i class="fi-star"></i> Take special note of why and when we should create a new feature, and when we should simply keep the new functionalities as part of an existing feature! The key is think about the re-usability of the user functionalities and views.</p>
+                        <p>Please follow the steps below to understand and learn the process of adding a new standard feature. For the purpose of this example, let's pretend that we are going to add a feature called <strong>`Dashboard`</strong>. Dashboard does already exist, so please feel free to look through the existing dashboard to study its mechanism.</p>
+                        <h5>Steps</h5>
+                        <ol>
+                            <li>Edit <strong>`/js/config.js`</strong>, and add <strong>`FEATURE_DASHBOARD`</strong> below the feature constants. The name of the feature is capitalized and prefixed by <strong>`FEATURE_`</strong>.</li>
+                            <li>Make a copy of <strong>`_template_feature.js`</strong> inside <strong>`/js/features`</strong> and name it <strong>`dashboard.js`</strong>.</li>
+                            <li>Make a copy of <strong>`_template_feature_str.js`</strong> inside <strong>`/js/features`</strong> and name it <strong>`dashboard_str.js`</strong>. Please note the language midfix <strong>`en`</strong> denotes the language that we are using now. For chinese as an example <strong>`gb`</strong> then we should name it <strong>`dashboard_str.gb.js`</strong>.</li>
+                            <li>Now that we created the required files, we need to make edits.</li>
+                            <li>Edit <strong>`dashboard_str.en.js`</strong>, change the comments header, update the string variable to <strong>`dashboardStrEN`</strong>. Make the necessary modifications to the dictionary as you need.</li>
+                            <li><p>Edit <strong>`dashboard.js`</strong> and update the <code class="language-javascript">`initDictionary()`</code> to initialize <strong>`dashboardStrEN`</strong>. Also make the necessary edits to the comment header.</p><p>* Please note that the string file is always appended to the front of the actual feature file but grunt, such that the strings will always be available for instantiation.</p></li>
+                            <li>
+                                <p>Create a folder in <strong>`ejs/features`</strong> and call it <strong>`dashboard`</strong>. All features should have their own unique feature folder in side EJS. EJS is like a view (page) that is dynamically loaded. For each view (page), we will need a unique ejs.</p>
+                                <p>The EJS file needs to be edited carefully on the div nodes and classes. The way the class inheritence needs to be carefully tagged so to keep css restricted within areas of relevance. </p>
+
+                                <p>Key areas to look at with relevance to <strong>`dashboard.scss`</strong>:</p>
+                                <ul>
+                                    <li><strong>`&lt;section ...&gt;`</strong> id and its class</li>
+                                    <li><strong>`&lt;div ...&gt;`</strong> div class right inside a <strong>`&lt;row&gt;`</strong> where the main contents are.</li>
+                                </ul>
+                            </li>
+                            <li>For EJS views or elements that are shared across features, place them inside <strong>`ejs/features/common`</strong>.</li>
+                            <li>If this feature uses specific images only needed inside this feature, place the image inside <strong>`/img/dashboard/`</strong>. Just like the EJS, the <strong>`dashboard`</strong> folder has to be created of course. The idea is to basically structure the site so that it is classed and clean.
+</li>
+                            <li>Create the sass file for dashboard `_dashboard.scss` inside <strong>`/scss/features/`</strong> folder. Copy the common things from another feature as required. Please make sure that the contents inside the sass file follows our CSS convention and rules. Take special note to the prefixing concept. Make sure you edit <strong>`app.scss`</strong> and <code class="language-scss">`@import "features/dashboard";`</code> like the others.
+</li>
+                            <li><strong>`/tpl`</strong> folder contains the common templates and EJS templates that are preloaded, all files here are combined into <strong>`index.html`</strong> on compile using grunt. Only put EJS templates that need to be preloaded here inside the <strong>`/tpl/common`</strong> folder.
+</li>
+                            <li>
+                                <p><i class="fi-alert"></i> IMPORTANT! This step is the most important, because if you don't do this, the feature does not get compiled by grunt and it will not work.</p>
+                                <ul>
+                                    <li>Edit <strong>`Gruntfile.js`</strong> and look for the <strong>`uglify`</strong> block.</li>
+                                    <li>
+                                        <p>Add a line at the feature block, and include the dashboard files:</p>
+                                        <code class="language-javascript">'js/features/dashboard.min.js': ['js/features/dashboard_str.en.js','js/features/dashboard.js']</code>
+
+                                        <p>What this does is that, it joins and combines the dashboard files into one file called <strong>`dashboard.min.js`</strong> and this file is dynamically loaded by require in the run time as the user browses to this page.</p>
+                                    </li>
+                                    <li>Restart grunt and let the whole site build.</li>
+                                </ul>
+                            </li>
+                            <li>Once you have completed this feature, you can call this feature by calling `<code class="language-javascript">loadFeature(FEATURE_DASHBOARD)</code>` from anywhere in the application. Due to the page sliding mechanism, it is important that everything you do follows the page sliding paradigm. You can probably test this using Chrome's console.
+</li>
+                            <li><p>NOTE! A feature can be loaded with a forced page slide direction by adding an argument at the end of the call:</p> `<code class="language-javascript">loadFeature(FEATURE_HOME, { forceDirection: 'left' })</code>`.
+                            <p>The two directions available are <strong>`left`</strong> and <strong>`right`</strong>.</p>
+</li>
+                        </ol>
+                        
+                        <h5>Feature Tricks</h5>
+                        <p>Feature structure is designed so that feature can jump in between features with data feeding during the jumps. Some customized feature tricks are listed below (for login hook). Please note that each feature can be treated as a standalone module and what you do inside the feature should not be deeply tied with one another. The only data correlations are actually done through the <strong>`loading`</strong> as explained below.</p>
+                        <p>The features are done in such a way so that every is flexible and customizable to cater for future scalability and extensions. I will not boast this to be the best way but it should not be too far off. Please feel free to polish the code and mechanism but then, please make sure to update this documentation.</p>
+                        <ul>
+                            <li>
+                                <strong>Simple feature level routing.</strong>
+                                <p>A simple rounting mechanism has been created on the url level to allow overriding the default loading feature. By default <strong>`FEATURE_HOME`</strong> is loaded, but you can pass in any equivalent strings to the feature name constants as defined in config.</p>
+                                <p>Page level routing are not implemented with this as that should rely on canJs's routing feature. As this is to be implemented to each feature's need, it will not be documented here. For information about canJS's routing, please go <a href="http://canjs.com/guides/Routing.html">here</a>.</p>
+                                <blockquote>https://portal.licence.nsw.gov.au/app/index.html?defaultFeature=fish</blockquote>
+                            </li>
+                            <li>
+                                <strong>Loading another feature normally with no peculiars.</strong>
+                                <blockquote>
+                                    <code class="language-javascript">loadFeature(FEATURE_FEEDBACK);</code>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <strong>Loading another feature by setting the default page (view). </strong>
+
+                                <p>The page names are identified and set as strings and are configured for each feature. So, it is important to set these page names correctly, or else it will not take you to where you want.</p>
+                                <blockquote>
+                                    <code class="language-javascript">    loadFeature(FEATURE_SETUP, 
+        defaultPage: "login"
+    );
+                                    </code>
+                                </blockquote>
+                                <p>Please note that the second parameter object is passed into the feature instance as <strong>`data`</strong>.</p>
+                            </li>
+                            <li>
+                                <strong>Loading another feature's page with a forced transition direction. </strong>
+
+                                <p>As this app is mobile front, the transition between pages are using slides. You have slide from the left and slide from the right. These transitions are usually automatically calculated based on page ordering (in side each feature). </p>
+                                <p>When loading a new feature, it is usually a slide to the left transition. However, this transition can be set forcefully based on <strong>`forcedDirection`</strong> attribute in the parameter (<strong>`left`, `right`</strong>).</p>
+                                <blockquote>
+                                    <code class="language-javascript">    loadFeature(FEATURE_PRODUCT, 
+        defaultPage: "summary",
+        forcedDirection: "left"
+    );
+                                    </code>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <strong>Passing models around or other custom attributes. </strong>
+
+                                <p>The current state of each feature is usually set inside a <strong>`model`</strong> map and this model is required to be passed around sometimes to maintain context between features.</p>
+                                <p>It is also possible to include feature specific customisations (<strong>`customToggle`</strong>) but these will only work for features that are implemented to cater the function.</p>
+
+                                <blockquote>
+                                    <code class="language-javascript">    loadFeature(FEATURE_PRODUCT, 
+        defaultPage: "summary",
+        forcedDirection: "left",
+        customToggle: true,
+        model: model
+    );
+                                    </code>
+                                </blockquote>
+                            </li>
+                            <li>
+                                <strong>Setting Returning and Destination</strong>
+
+                                <p>Sometimes features need to go in between each other. An example of such play in this DG App is <strong>`FEATURE_SETUP`</strong>. See how the <strong>`register`</strong> view is hooked in throughout the other features.</p>
+
+                                <blockquote>
+                                    <code class="language-javascript">    loadFeature(FEATURE_SETUP, 
+        defaultPage: "register",
+        forcedDirection: "left",
+        model: specialData,
+        lastFeature: FEATURE_RENEWAL,
+        lastFeaturePage: "rstep1",
+        nextFeature: FEATURE_RENEWAL,
+        nextFeaturePage: "rstep3"
+    );
+                                    </code>
+                                </blockquote>
+                                <p>In the example above, it can be seen that the user is to be taken from renewal's <strong>`rstep1`</strong> to setup's <strong>`register`</strong> and upon completed return back to renewal's <strong>`rstep3`</strong>. Please note that the logic of returning to the <strong>`nextFeature`</strong> needs to be implemented of course at the relevant steps.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

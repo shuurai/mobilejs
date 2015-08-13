@@ -1,0 +1,27 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _home.scss
+Version: 1.0
+
+Description:
+CSS specific for the Kitchen Sink. Please prefix with dg-kitchen.
+This is just an example to show how css can be customized.
+
+*/
+
+.dg-kitchen {}
+
+.dg-kitchen .dg-sidebar {
+    background-color: darken($dg-backing-light-color, 1%);
+    padding: $dg-column-gutter;
+}
+
+.dg-kitchen .main-section {
+    background-color: darken($dg-backing-light-color, 1%);
+    padding: rem-calc(0 20);
+}

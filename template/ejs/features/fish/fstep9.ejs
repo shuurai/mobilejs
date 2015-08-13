@@ -1,0 +1,52 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu.ejs', this.content); %>
+</section>
+<section id="dg-fstep9-section" role="main" class="dg-fish scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-fstep9 large-12 medium-12 columns">
+            <div class="dg-success">
+            	<h4 class="dg-success-icon"></h4>
+            	<h3><%= content.attr('confirmationMsg') %><h3>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="dg-h4-label"><%= toUpper(getStr('D074')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('licenceNo') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D073')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('startDate') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D046')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('duration') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D075')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('fullName') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D076')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('amount') %></div>
+                    
+                    <div class="dg-h4-label"><%= toUpper(getStr('D077')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('date') %></div>
+                </div>
+            </div>
+            <br/>
+            <form onsubmit="return false;">
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+            </form>
+        </div>
+    </div>
+</section>

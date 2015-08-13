@@ -1,0 +1,119 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu'+(isLoggedIn()?'_auth':'')+'.ejs', this.content); %>
+</section>
+<section id="dg-services-section" role="main" class="dg-home scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div-->
+        <div class="dg-services large-12 medium-12 columns">
+            <h4>
+                <%= getStr('D022') %>
+            </h4>
+
+            <hr />
+            <div>
+                <h2>B</h2>
+                <ul><li><h4>Boat Driver Licence Renewal</h4></li></ul>
+            </div>
+            <hr />
+            <div>
+                <h2>C</h2>
+                <ul>
+                    <li><h4>Contractor Licence  Renewal</h4></li>
+                    <li><h4>Conveyancers Licence  Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>F</h2>
+                <ul>
+                    <li><h4>Fishing (Recreational)</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>M</h2>
+                <ul>
+                    <li><h4>Mooring (Commercial) Licence (annual payments only)</h4></li>
+                    <li><h4>Mooring (Private) Licence Renewal</h4></li>
+                    <li><h4>Motor Dealers Licence Renewal</h4></li>
+                    <li><h4>Motor Vehicle Repairers Licence Renewal</h4></li>
+                </ul>
+            </div>
+
+            <hr />
+            <div>
+                <h2>N</h2>
+                <ul>
+                    <li><h4>Native Animal Keepers Licence Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>P</h2>
+                <ul>
+                    <li><h4>Pawnbroker &amp; Second-hand Dealer Licence Renewal</h4></li>
+                    <li><h4>Private Hospital Licence Renewal</h4></li>
+                    <li><h4>Property Valuer's Registration Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>R</h2>
+                <ul>
+                    <li>
+                        <h4>Real Estate Agent Licence Renewal</h4>
+                    </li>
+                    <li><h4>Real Estate - Stock &amp; Station Agent Licence Renewal</h4></li>
+                    <li><h4>Real Estate - Business Agent Licence Renewal</h4></li>
+                    <li><h4>Real Estate - On-site Residential Property Manager Licence Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>S</h2>
+                <ul>
+                    <li><h4>Salespersons &amp; Registered Managers Licence Renewal</h4></li>
+                    <li><h4>Strata Managing Agent Licence Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>T</h2>
+                <ul>
+                    <li><h4>Travel Agent Licence Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <div>
+                <h2>V</h2>
+                <ul>
+                    <li>
+                        <h4>Vessel Registration Renewal</h4>
+                    </li>
+                    <li><h4>Vessel Survey Renewal</h4></li>
+                </ul>
+            </div>
+            <hr />
+            <h4>
+                <%= getStr('D023') %>
+            </h4><br />
+
+            <form onsubmit="return false;">
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+            </form>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu'+(isLoggedIn()?'_auth':'')+'.ejs', this.content); %>
+</section>
+<section id="dg-landing-section" role="main" class="dg-home scroll-container dg-transition-page">
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Side Area</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-landing large-12 medium-12 columns">
+            <div class="dg-top-spacer"></div>
+            <div class="dg-landing-menu dg-landing-banner">
+                <a href="#" title="<%= getStr('D024') %>">
+                    <h2><%= getStr('D024') %></h2>
+                    <h4><%= getStr('D007') %></h4>
+                </a>
+            </div>
+            <div class="dg-landing-menu dg-landing-renew">
+                <a href="#" title="<%= getStr('D010') %>">
+                    <h2><%= getStr('D008') %></h2>
+                    <h4><%= getStr('D009') %></h4>
+                </a>
+            </div>
+            <div class="dg-landing-menu dg-landing-fish">
+                <a href="#" title="<%= getStr('D011') %>">
+                    <h2><%= getStr('D012') %></h2>
+                    <h4><%= getStr('D013') %></h4>
+                </a>
+            </div>
+            <!-- div class="dg-landing-menu dg-landing-update">
+                <a href="#" title="<%= getStr('D011') %>">
+                    <h3><%= getStr('D025') %></h3>
+                    <h5><%= getStr('D026') %></h5>
+                </a>
+            </div -->
+            <div class="dg-landing-footer">
+                <a class="dg-footer-link" href="<%= content.attr('fullSiteURL') %>" title="<%= getStr('D014') %>" target="_blank"><%= getStr('D014') %></a>
+                <a href="http://www.nsw.gov.au" title="<%= getStr('D015') %>" target="_blank">
+                    <i class="dg-waratah-logo"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

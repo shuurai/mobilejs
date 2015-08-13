@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - How To Add 3rd Party Library</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - How To</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>...</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">How To <i class="fi-link"></i></h1>
+                        <h3 class="subheader">Add New 3rd Party Library<a id="newfeature"></a></h3>
+                        <p>Depending on the nature of the library, they are mostly globally available once loaded. Some might require manual instantiations or only to be instantiated when needed. Hence some level of customization and understanding is required to keep this web app optimized and organized.</p>
+                        <p>
+                            Please follow the steps below to understand and learn the process of adding a standard new 3rd party javascript library like <strong>`moment.js`</strong> and how to use it.
+                        </p>
+                        
+                        <ol>
+                            <li>Use brower to add the javascript library to the vendor folder. Or simply extract the full/release folder of the library into the vendor folder. Create its relevant folder though just like other ones.</li>
+                            <li>
+                                <p>Open up <strong>`config.js`</strong> and configure the path for requireJS to load.</p>
+                                <code class="language-javascript">"moment": cdnURL+"vendor/newlibrary/min/newlibrary.min"</code>                                
+                             </li>
+                            <li>
+                                <p>Then open up `app.js` file and include the library in the second level require loading argument.</p>
+                                <code class="language-javascript">require([
+        "canjs-ejs", 
+        "foundation", 
+        "moment", 
+        "moment-lang", 
+        "dg-components", 
+        "fastclick", 
+        "newlibrary", // INSERT BEFORE COMMON
+        "common"], 
+    function (
+        _can_ejs_, 
+        _foundation_, 
+        _moment_, 
+        _moment_lang_, 
+        _components_, 
+        _fastclick_, 
+        _newlibrary_, // INSERT BEFORE COMMON
+        _common_
+                                    )) {...}</code>
+                                <p>The reason that it should be inserted before common is to help with ordering of loading in case this library require instantiations.</p>
+                            </li>
+                            <li>If the library is used everywhere and needs instantiations, do it in the success block of the second level <strong>`require()`</strong> inside <strong>`app.js`</strong> or <strong>`common()`</strong> function inside <strong>`common.js`</strong>. Decide where it should fit as you see fit. Otherwise, instantiate as needed whenever, wherever.</li>
+                        </ol>
+                        <p>* Grunt publishes all folders inside <strong>`vendor`</strong> into <strong>`publish`</strong> automatically, so no modification of the grunt's configuration is required.</p>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

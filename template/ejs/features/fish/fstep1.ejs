@@ -1,0 +1,34 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu.ejs', this.content); %>
+</section>
+<section id="dg-fstep1-section" role="main" class="dg-fish scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-fstep1 large-12 medium-12 columns">
+            <h2><%== getStr('D004') %></h2>
+            <ul>
+                <li><h3>3 days: $7</h3></li>
+                <li><h3>1 month: $14</h3></li>
+                <li><h3>1 year: $35*</h3></li>
+                <li><h3>3 years: $85*</h3></li>
+            </ul>
+            <h4>* Plastic cards issued</h4>
+            <h4 class="fi-grey"><%== toUpper(getStr('D014')) %></h4>
+            <p id="dg-supported-cards"><%= this.content.attr('SupportedCards') %></p>
+            <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+        </div>
+    </div>
+</section>

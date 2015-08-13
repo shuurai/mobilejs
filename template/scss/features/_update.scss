@@ -1,0 +1,48 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _update.scss
+Version: 1.0
+
+Description:
+CSS specific for the update screens. Please prefix with dg-update.
+*/
+
+/* Variables */
+
+/* The update feature top class */
+.dg-update {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-update .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The step 1-ever view classes start */
+.dg-update .dg-ustep1, .dg-update .dg-ustep2b, .dg-update .dg-ustep3, .dg-update .dg-ustep3a, .dg-update .dg-ustep3b, .dg-update .dg-ustep4 {
+    padding: $dg-column-gutter; 
+}
+/* The step 1-ever view classes end */
+
+/* The step 2 */
+.dg-update .dg-ustep2 {
+	padding: $dg-column-gutter;
+	padding-top: rem-calc(3);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.dg-update .dg-success-icon {
+    //font-size: rem-calc(100);
+    //color: $success-color;
+    background: url("../img/success_small.png") 50% 50%;
+    width: rem-calc(70);
+    height: rem-calc(70);
+    // margin: auto;
+    margin-bottom: rem-calc(20);
+}

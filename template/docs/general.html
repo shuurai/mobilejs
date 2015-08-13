@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - General</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - General</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>...</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">General <i class="fi-cloud"></i></h1>
+                        <h3 class="subheader">Requirements<a id="requirements"></a></h3>
+                        <p>
+                            You'll need to have the following items installed on your mac or windows before continuing. The commands for both operating systems should be none the less the same.
+                        </p>
+                        <ul>
+                          <li><a href="http://nodejs.org">[Node.js] </a>: Use the installer provided on the NodeJS website.</li>
+                          <li><a href="http://gruntjs.com">[Grunt.js] </a>: Run<blockquote>$ sudo <code class="language-bash">npm install -g grunt-cli</code></blockquote></li>
+                          <li><a href="http://bower.io">[Bower.io] </a>: Run<blockquote>$ sudo <code class="language-bash">npm install -g bower</code></blockquote></li>
+                          <li><a href="http://git-scm.com">[Git] </a>: Run<blockquote>$ <code class="language-bash">git pull origin master</code></blockquote></li>
+                        </ul>
+
+                        <h3 class="subheader">Quick Start<a id="quickstart"></a></h3>
+                        <p>
+                            Once you have checked out please get all the node modules configured for this project by running the following command inside the source directory. By default, this project is a git project, once you have checked out from a git repo or have access to a checked out git folder, you can start the following:
+                        </p>
+                        <blockquote>$ <code class="language-bash">npm install</code></blockquote>
+                        <p>Whether you are using git or TFS, do not commit the <strong>`node_modules`</strong> and <strong>`build`</strong> folder as they are generated for each edit.</p>
+
+                        <h5>Bower Managed Libraries</h5>
+                        <p>Vendor libraries are mostly installed and managed using bower. This step can be skipped if the <strong>`vendor`</strong> folder is already populated. Libraries required by the Digital Gateway are listed below:</p>
+                        <ul>
+                             <li>[canjs]: version 2.1.1</li>
+                             <li>[foundation]: version 5</li>
+                             <li>[fastclick]: version 1.0.1 as dependent by foundation</li>
+                             <li>[jquery]: version 2.1.1 as dependent by foundation</li>
+                             <li>[jquery-placeholder]: version 2.0.8 as dependent by foundation</li>
+                             <li>[jquery-cookie]: version 1.4.1 as dependent by foundation</li>
+                             <li>[modernizr]: version 2.8.2</li>
+                             <li>[underscore]: version 1.6.0</li>
+                             <li>[icheck]: version 1.0.2</li>
+                             <li>[momentjs]: version 2.6.0</li>
+                             <li>[autoNumeric]: 1.9.22</li>
+                             <li>[requirejs]: 2.1.11</li>
+                        </ul>
+                        <p>They can be installed by running:</p>
+                        <blockquote>$ <code class="language-bash">bower install $name</code></blockquote>
+                        <p>... where <strong>`$name`</strong> is to be replaced with each of the library listed above. They are configured to be installed into the `vendor` directory, and becuase they are already part of the repository, this step can be skipped.</p>
+
+                        <h5>Start Development</h5>
+                        <p>After everything has all been setup, while you're working on your project, run:</p>
+                        <blockquote>$ <code class="language-bash">grunt build</code></blockquote> or 
+                        <blockquote>$ <code class="language-bash">grunt</code></blockquote>
+                        <p>... to build and watch for changes to automatically build and minify the 'app.js', 'app.css' and all other relevant app specific js/css files into the build folder for you. A statis file server will be accessible at the port <strong>`1777`</strong> as configured in the <strong>`grunt.js`</strong> file.</p>
+
+                        <h5>TFS & Git Repositories</h5>
+                        <p>For this project, we will manage two repositories, one is a git repo which can be repositoried anywhere, your computer, phone, etc. However, every now and then, the latest source and build (Publish) needs to be copied and synced into TFS's relevant folder. Once copied, do the following to check in:</p>
+                        <ul>
+                            <li>`Compare with Latest`</li>
+                            <li>`Checkout the Modified Files`</li>
+                            <li>`Add New Files`</li>
+                            <li>`Delete Unwanted Files`</li>
+                            <li>`Check In Normally`</li>
+                        </ul>
+                        <h5>Directory Structure & Important Files</h5>
+                        <ul>
+                            <li><a href="../build">[build]</a>: Build publish folder for deployment.</li>
+                            <li><a href="../css">[css]</a>: Compiled css folder and fonts.</li>
+                            <li><a href="../docs">[docs]</a>: As the name suggests, documentation.</li>
+                            <li><a href="../ejs">[ejs]</a>: Dynamically loaded templates such as features and components.</li>
+                            <li><a href="../img">[img]</a>: As the name suggests, images.</li>
+                            <li><a href="../js">[js]</a>: Application source javascript files for compiling into build.</li>
+                            <li><a href="../scss">[scss]</a>: SASS folder containing common, site and feature specific styling.</li>
+                            <li><a href="../tpl">[tpl]</a>: Commonly used widget-like templates (EJS format) used to be precompiled into `index.html`.</li>
+                            <li><a href="../vendor">[vendor]</a>: All the vendor js/css libraries and frameworks added by brower such as `canjs`, `jquery`, etc.</li>
+                            <li><a href="../node_modules">[node_modules]</a>: Modules required for `Grunt` and other build related tools.</li>
+                            <li><a href="../js/app.js">`app.js`</a>: Application base js file.</li>
+                            <li><a href="../js/config.js">`config.js`</a>: Application config js file.</li>
+                            <li><a href="../js/common.js">`common.js`</a>: Application common js file.</li>
+                            <li><a href="../Gruntfile.js">`Gruntfile.js`</a>: Grunt build script.</li>
+                            <li><a href="../scss/app.scss">`scss/app.scss`</a>: Application base scss here.</li>
+                            <li><a href="../scss/_settings.scss">`scss/_settings.scss`</a>: Foundation precompilation configuration settings go in here.</li>
+                            <li><a href="../scss/_common.scss">`scss/_common.scss`</a>: Application specific styles go here.</li>
+                        </ul>
+
+                        <h3 class="subheader">Style Rules<a id="stylerules"></a></h3>
+                        <p>In order to keep this web app maintainable, scalable and consistent in style, rules have been created to be read, followed and persisted.</p>
+                        <h5>CSS/SCSS Rules</h5>
+                        <p>SASS is used as part of the `foundation` framework but customized to match the styling of the originally designed prototype.</p>
+                        <ul>
+                            <li>Generally an include, sass class should prefix with the feature name, component or area but
+                            for general items, the prefix should start with <strong>`dg-`</strong> or <strong>`$dg-`</strong>. E.g. <strong>`$dg-backing-light-color`</strong></li>
+                            <li>Use hyphen only and do not use under score anywhere.</li>
+                            <li>Use lower case for all sass and css</li>
+                            <li><strong>`_functions.scss`</strong> from foundation provides some nice scss functions like <strong>`rem-calc`</strong>. Learn to use them.</li>
+                            <li>Most things that we need for positioning, layouts and even icons are already available, just look up foundation's doc.</li>
+                            <li>For a great list of icons, check out the icon list here <a href="http://zurb.com/playground/foundation-icon-fonts-3">`http://zurb.com/playground/foundation-icon-fonts-3`</a></li>
+                            <li>For a list of template examples for layouts using foundation check out <a href="http://foundation.zurb.com/templates.html">`http://foundation.zurb.com/templates.html`</a></li>
+                            <li>For off canvas bindings, look up <a href="http://foundation.zurb.com/docs/components/offcanvas.html#">`http://foundation.zurb.com/docs/components/offcanvas.html#`</a></li>
+                            <li>For simplicity and sizing to match the original prototype, all <strong>&lt;p&gt;</strong> are replaced with <strong>&lt;h4&gt;</strong> or <strong>&lt;h3&gt;</strong> depending on sizing. This is done to keep the responsive nature in place instead of marking up the base font size and make everything eeriely large.</li>
+                            <li>Never use custom sizing anywhere. Reuse sizes on SCSS level or using existing css components.</li>
+                        </ul>
+
+                        <h5>Default Routing</h5>
+                        <p>Routing can be extended using can js's routing in the future if more complex parameters are needed to be parsed and validated. </p><p>For now, only <strong>`defaultFeature`</strong> and <strong>`defaultPage`</strong> is parsed in <strong>`app.js`</strong> for default loading of specific feature and page.</p>
+                        <blockquote>
+                            <h5>Example:</h5>
+                            <a href="http://localhost:1777/app/?defaultFeature=setup&defaultPage=resetpassword">http://localhost:1777/app/?defaultFeature=setup&defaultPage=resetpassword</a>
+                        </blockquote>
+
+                        <h5>Sizing and em/px</h5>
+                        <p>Usage of EM and PX is very specific in foundation, and for all fonts and such, please refer to <strong>`_settings.scss`</strong> as they should not be hacked everywhere. Try to reuse predefined/global sizes as much as possible.</p>
+                        <ul>
+                          <li>Learn about Nesting, Partials, Mixins, Extend, Operators</li>
+                          <li>Study Global Styles of foundation: <a href="http://foundation.zurb.com/docs/components/global.html">`http://foundation.zurb.com/docs/components/global.html</a></li>
+                          <li>As a general concept, anything to do with media queries, EM should be used. However, for specific sizing within the same media type, px can be used. For example px can be used for padding if this padding is <strong>`show-for-large`</strong> only.</li>
+                          <li>Base em is at the moment set to 16px in <strong>`_settings.scss`</strong>.</li>
+                        </ul>
+
+                        <h5>New Html Elements and Styling</h5>
+
+                        <p>For any common html elements such as inputs, error splashes etc that could be reused, it should be built inside this template first. Then added to the kitchen sink close to where it belongs.</p>
+
+                        <h3 class="subheader">JS Rules<a id="jsrules"></a></h3>
+                        <p>This is specific DG App scoped javascript rules. It is a superset of common javascript conventions and optimisations. Common rules set out here is good enough. Visit <a href="http://javascript.crockford.com/code.html">`http://javascript.crockford.com/code.html`</a> for more details. Generally:</p>
+                        <blockquote>Neatness counts.</blockquote>
+                        <ul>
+                          <li>Files with classes should be split with <strong>`.`</strong> and composite names should be using <strong>`_`</strong> instead of camel casing.</li>
+                          <li>Files should always be lower casing. E.g. <strong>`my.special_ability.js`</strong></li>
+                          <li>Variables and functions should always be using camel casing just to really differentiate from css conventions.</li>
+                          <li>System level things are always prefixed with <strong>`_`</strong> and should be used if you are not sure.</li>
+                          <li>All js components are merged into one file.</li>
+                        </ul>
+
+                        <h3 class="subheader">Templates Rules<a id="templatesrules"></a></h3>
+                        <p>Files should be using camel casing in the same style as how they are referenced in code. This is also to differentiate between <strong>`js`</strong>, and <strong>`css</strong>. Obviously, if you just want to join some particular words/phrases due to habits (firstname versus firstName) in one line with no casing, that is fine as well. More details about templates will be explained in the template section <a href="how.html#newtemplate">here</a>.</p>
+
+                        <h3 class="subheader">API Services<a id="services"></a></h3>
+                        <p>API Services are not documented as part of this documentation, but test harness links are provided by the .NET team member. For more details in relation to this, please consult Karen Wow or Jack Jin. However, it is preferrable for the team to update the specifications of all services here or in a standalone section eventually in the future.</p>
+                        <a class="button primary" href="http://sit.portal.licence.nsw.gov.au/ICPDGservices/test/api_tester.html">Latest Test Harness <i class="fi-lightbulb"></i></a>
+
+                        <h5>Error Handling</h5>
+                        <p>Although the details specifications are not documented, the error handling for all of the service calls should be understood. All services are called using the <code class="language-javascript">`callAjax(params, successCallBack, failCallBack, callerObject)`</code> function which can be found in <strong>`common.js`</strong>. An example call:</p>
+                        <blockquote>
+                          <code class="language-javascript">
+    callAjax({ 
+        url: constructAPIURL("api", "Renew/Calculate"), 
+        dataType:"json", 
+        data: { 
+            id: model.renewalDetails.renewalID, 
+            durationVal: model['durationValue'], 
+            duration: model['durationLabel'], 
+            changeClass: model['classSelection'] 
+        }}, this.onGetCost, this.onGetCostFail, control);
+                          </code>
+                        </blockquote>
+                        <p>This function is tied in quite closely with the control system (feature), where error handling, onSuccess and onFail scenario handling are all catered for such that it can be customized at any point in time during a transaction if required. The important thing is the way errors are fed back from the service. All errors will return a HTTP level error code with relevant exception data which will be parsed.</p>
+                        <blockquote>
+                            Common Error Response
+                            <code class="language-javascript">
+    {
+        code: 400,
+        message: "This request is invalid"
+    }
+                          </code>
+                        </blockquote>
+                        <blockquote>
+                            Form Error Response
+                            <code class="language-javascript">
+    {
+        code: 400,
+        message: "This request is invalid",
+        modelState: {
+            "": "Generic form level error messages.",
+            "email": "This email has already been taken.",
+            "password": "Your password is not secure enough."
+        }
+    }
+                          </code>
+                        </blockquote>
+                        <p>The form error response is handled and parsed such that inputs will show its relevant error states and messages. All detailed data responses are wrapped inside the <strong>`modelState`</strong> attribute.</p>
+
+                        <h3 class="subheader">Popup<a id="popup"></a></h3>
+                        <p>Calling a popup using the generic DG popup is easy. Simply call <strong>`createPopup(...)`</strong> with example as follows:</p>
+                        <blockquote>
+                          <code class="language-javascript">
+    createPopup("Test Popup Title", "Test Popup Body", "LEFT BUTTON", "RIGHT BUTTON", function(){
+        alert("Left Button Clicked");
+    }, function() {
+        alert("Right Button Clicked");
+    });
+                          </code>
+                        </blockquote>
+                        <p>Popup component supports single button, and two buttons. It becomes a single button when you leave right button text to <strong>`null`</strong> or an empty string.</p>
+
+                        <h3 class="subheader">Helpers<a id="helpers"></a></h3>
+                        <p>Please find a list of most of the commonly used helpers, prototype extentions and ejs prototypes implemented in this web app. Most of them are implemented as a global function inside <strong>`common.js`</strong> please go through the file for helpers that might be useful but not listed here below. Please maintain and continue to update this document if you are to add further important functionalities.</p>
+
+                        <h5>Format Mobile Input</h5>
+                        <p><strong>`<code class="language-javascript">formatMobileInput("mobile")</code>`</strong> is an easy way to add auto formatting ability to an input for australian formatted mobile numbers. The logic can be found inside <strong>`common.js`</strong> where it does string manipulation on key input events.</p>
+
+                        <h5>Fix Date Input</h5>
+                        <p><strong>`<code class="language-javascript">fixDateInput("startDate")</code>`</strong> is an easy way to make an input with type of <strong>`date`</strong> revert to <strong>`text`</strong> for older hardware particularly for android phones whose browser is built with a Chrome version earlier or equal to <strong>`23.x`</strong>.</p>
+
+                        <h5>Date Get Month Formatted</h5>
+                        <p><strong>`<code class="language-javascript">dateObj.getMonthFormatted()</code>`</strong> returns the month in <strong>`00`</strong> form of a javascript date object.</p>
+
+                        <h5>Date Get Day Formatted</h5>
+                        <p><strong>`<code class="language-javascript">dateObj.getDateFormatted()</code>`</strong> returns the day value in <strong>`00`</strong> form of a javascript date object.</p>
+
+                        <h5>Remove Char</h5>
+                        <p><strong>`<code class="language-javascript">"REMOVE$$$".removeChar('$')</code>`</strong> removes all occurances of the char/string <strong>`$`</strong> in the argument.</p>
+
+                        <h5>Insert String</h5>
+                        <p><strong>`<code class="language-javascript">"ORIGINAL".insert(3, null, "IIII")</code>`</strong> inserts <strong>`IIII`</strong> at index of 3. The second argument is how many remaining characters to keep, and if null, the whole string will be kept. The resulting string should be <strong>`ORIIIIGINAL`</strong></p>
+
+                        <h5>Get Translation String</h5>
+                        <p><strong>`<code class="language-javascript">_s('D0001')</code>`</strong> gets the string with the key <strong>`D0001`</strong> from the translation mappings.</p>
+
+                        <h5>API URL Construct</h5>
+                        <p><strong>`<code class="language-javascript">constructAPIURL(area, arg)</code>`</strong> constructs an URL by passing in the area and argument. This is to prevent inconsistent hostnames and base directories. The resulting URL is essentially `<code class="language-javascript">front+area+"/"+arg</code>`.</p>
+
+                        <h5>Call Ajax</h5>
+                        <p><strong>`<code class="language-javascript">callAjax(params, successCallBack, failCallBack, callerObject)</code>`</strong> constructs the URL and request object from params and makes the transaction call to the provide service. The callbacks are automatically triggered if they are not null in which case nothing will show to the user. All AJAX calls should be done through this function unless otherwise it is a call to a service other than <strong>`ICPDGServices`</strong>.</p>
+                        <blockquote>
+                          <code class="language-javascript">
+    callAjax({ 
+        url: constructAPIURL("api", "Renew/Calculate"), 
+        dataType:"json", 
+        data: { 
+            id: model.renewalDetails.renewalID, 
+            durationVal: model['durationValue'], 
+            duration: model['durationLabel'], 
+            changeClass: model['classSelection'] 
+        }}, this.onGetCost, this.onGetCostFail, control);
+                          </code>
+                        </blockquote>
+
+                        <h5>Is User Logged In</h5>
+                        <p>Checks if the value is of <strong>`true`</strong> or any similar alternatives.</p>
+                        <blockquote>
+                            <code class="language-javascript">isTrue(value);</code>
+                        </blockquote>
+
+                        <h5>Is True</h5>
+                        <p>Checks if the current user is logged in or not by checking the <strong>`userData`</strong> object and <strong>`ACCESS_TOKEN`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">isLoggedIn();</code>
+                        </blockquote>
+
+                        <h5>Is IE Mobile</h5>
+                        <p>Checks navigator agents for <strong>`IEMobile`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">isIEMobile();</code>
+                        </blockquote>
+
+                        <h5>Is Old Chrome</h5>
+                        <p>Checks navigator agents for android version between <strong>`10.x`</strong> and <strong>`20.x`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">isOldChrome();</code>
+                        </blockquote>
+
+                        <h5>Is New Chrome</h5>
+                        <p>Checks navigator agents for android version larger or equal to <strong>`23.x`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">isNewChrome();</code>
+                        </blockquote>
+
+                        <h5>Has Chrome</h5>
+                        <p>Checks navigator agents for the string <strong>`Chrome`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">hasChrome();</code>
+                        </blockquote>
+
+                        <h5>Is Apple Mobile</h5>
+                        <p>Checks navigator agents for the the strings <strong>`iPhone|iPad|iPod`</strong>.</p>
+                        <blockquote>
+                            <code class="language-javascript">isAppleMobile();</code>
+                        </blockquote>
+
+                        <h5>Fade In Element</h5>
+                        <p>Fades in a jquery element using css3's transition effects with listener on <strong>`onTransitionEnd`</strong> as well as a forced timer end.</p>
+                        <blockquote>
+                            <code class="language-javascript">fadeIn(jqueryElement);</code>
+                        </blockquote>
+
+                        <h5>Fade Out Element</h5>
+                        <p>Fades out a jquery element using css3's transition effects.</p>
+                        <blockquote>
+                            <code class="language-javascript">fadeOut(jqueryElement);</code>
+                        </blockquote>
+
+                        <h5>Capitalises a String</h5>
+                        <p>Makes the first letter of every word in the string a capital letter.</p>
+                        <blockquote>
+                            <code class="language-javascript">formatCapName("i play to win!");</code>
+                        </blockquote>
+
+                        <h5>Capitalises a String</h5>
+                        <p>Makes the first letter of every word in the string a capital letter.</p>
+                        <blockquote>
+                            <code class="language-javascript">formatCapName(string);</code>
+                        </blockquote>
+
+                        <h5>Formats Phone</h5>
+                        <p>Cleanses the phone string by removing spaces and things.</p>
+                        <blockquote>
+                            <code class="language-javascript">formatPhone("09 93823 8234");</code>
+                        </blockquote>
+
+                        <h5>Formats Email</h5>
+                        <p>Cleanses the email string by removing spaces and make it lower case.</p>
+                        <blockquote>
+                            <code class="language-javascript">formatPhone(" john .susan@yahoo.com");</code>
+                        </blockquote>
+
+                        <h5>Formats Currency String</h5>
+                        <p>Cleanses a number string by prefixing with <strong>`$`</strong> if needed and <strong>`.00`</strong> two decimal points.</p>
+                        <blockquote>
+                            <code class="language-javascript">formatCurrency("33.9");</code>
+                        </blockquote>
+
+                        <h5>Australian States</h5>
+                        <p>Returns an object containing the Australian states for use in a dg select box.</p>
+                        <blockquote>
+                            <code class="language-javascript">getAusStates();</code>
+                        </blockquote>
+
+                        <h5>Is String Empty</h5>
+                        <p>Checks if a string is empty or null.</p>
+                        <blockquote>
+                            <code class="language-javascript">isEmpty(string);</code>
+                        </blockquote>
+
+                        <h5>Invalidates Form</h5>
+                        <p>This is an important function used everywhere that has a form to help parse the validation of the inputs and perform neccessary feedbacks. For details, please see the function in <strong>`common.js`</strong></p>
+                        <blockquote>
+                            <code class="language-javascript">invalidateForm(inputsArray, successCallBack, failCallBack);</code>
+                        </blockquote>
+
+                        <h5>Populates Form</h5>
+                        <p>This is an important function used everywhere that has a form to help populate the form inputs with existing values if available and also enabling focus events if any. For details, please see the function in <strong>`common.js`</strong>. `elementParent` is the parent element control of its inputs.</p>
+                        <blockquote>
+                            <code class="language-javascript">populateFormValues(elementParent, inputsArray, values);</code>
+                        </blockquote>
+
+                        <h5>Show Wait On Submit</h5>
+                        <p>This is a specific feature for all the forms with a submit button. This handles the style changes and wording of the waiting period when a form is submitting. The timer and states are handled in each control specifically. If <strong>`time`</strong> is -1, the submitting phase will go on forever until times out which is set according to the config.</p>
+                        <blockquote>
+                            <code class="language-javascript">showWaitOnSubmit(buttonElement, callBackFunction, time);</code>
+                        </blockquote>
+
+                        <h5>Analyse Password Strength</h5>
+                        <p>Analyses a string and checks its structure to determin a strength score between 0 and 100 where 100 is very secure. The second argument is the required field length to act as an extra strength measuring parameter.</p>
+                        <blockquote>
+                            <code class="language-javascript">analysePasswordScore("fjiEJ39@", 6);</code>
+                        </blockquote>
+
+                        <h5>Show Splash Error</h5>
+                        <p>When there is an error or an alert that needs to be displayed on the top of screen, use the following code anywhere:</p>
+                        <blockquote>
+                            <code class="language-javascript">showSplashError("This an alert!");</code>
+                        </blockquote>
+
+                        <h5>Submit Error</h5>
+                        <p>For debugging purposes, when the server returns error code `500`, the following is called. At the moment, it is not yet hooked up with a real service but the functionalities are already in place.</p>
+                        <blockquote>
+                            <code class="language-javascript">submitError(errorDetails);</code>
+                        </blockquote>
+
+                        <h5>All Enter Fix</h5>
+                        <p><code class="language-javascript">can.$.fn.enterFix</code> prevents the <strong>`Enter`</strong> button from been active in forms.</p>
+
+                        <h5>Format Address</h5>
+                        <p>`<code class="language-javascript">formatAddress(addressObject)</code>` is a function that basically takes a typical address object with the following structure and format them into a single string.</p>
+                        <blockquote>
+                            <code class="language-javascript">
+    {
+        addressLine1: "1 Fish Street",
+        addressLine2: "",
+        suburb: "Eastlakes",
+        state: "NSW",
+        postcode: 2000
+    }
+                            </code>
+                        </blockquote> to
+
+                        <blockquote>
+                            "1 Fish Street, Eastlakes, NSW, 2000"
+                        </blockquote>
+
+                        <h5>EJS: Display Address</h5>
+                        <p>`<code class="language-javascript">displayAddress(this.data.attr('addressObj'))</code>` is a helper function that can only be used inside an EJS. EJS helpers are decalared inside the <strong>`common()`</strong> function. Display address basically takes a typical address object with the following structure and format them into a single string.</p>
+                        <blockquote>
+                            <code class="language-javascript">
+    {
+        addressLine1: "1 Fish Street",
+        addressLine2: "",
+        suburb: "Eastlakes",
+        state: "NSW",
+        postcode: 2000
+    }
+                            </code>
+                        </blockquote> to
+
+                        <blockquote>
+                            "1 Fish Street, Eastlakes, NSW, 2000"
+                        </blockquote>
+
+                        <h5>EJS: Format JSON Date</h5>
+                        <p><strong>`<code class="language-javascript">formatDotNetDate(params, "LLL")</code>`</strong> formats a typical JSON (yyyy-mm-ddTHH:mm:ss.zzzzzz) date into a human friendly date. This relies on the <strong>`moment.JS`</strong> library where <strong>"LLL"</strong> represents a particular format.</p>
+
+                        <h5>EJS: Get Translation String</h5>
+                        <p><strong>`<code class="language-javascript">getString("D0001")</code>`</strong> is equivalent to `<code class="language-javascript">_s("D0001")</code>` on the outside.</p>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

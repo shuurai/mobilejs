@@ -1,0 +1,120 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _fish.scss
+Version: 1.0
+
+Description:
+CSS specific for the fish screens. Please prefix with dg-fish.
+*/
+
+/* Variables */
+
+/* The fish feature top class */
+.dg-fish {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-fish .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The step 1 view classes start */
+.dg-fish .dg-fstep1 {
+    padding: $dg-column-gutter; 
+}
+
+.dg-fstep1 li h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* The step 1 view classes end */
+
+/* The step 1a view classes start */
+.dg-fish .dg-fstep1a {
+    padding: $dg-column-gutter; 
+}
+/* The step 1a view classes end */
+
+/* The step 1b view classes start */
+.dg-fish .dg-fstep1b {
+    padding: $dg-column-gutter; 
+}
+/* The step 1b view classes end */
+
+/* The step 2 view classes start */
+.dg-fish .dg-fstep2 {
+    padding: $dg-column-gutter; 
+}
+/* The step 2 view classes end */
+
+/* The step 3 view classes start */
+.dg-fish .dg-fstep3 {
+    padding: $dg-column-gutter; 
+}
+/* The step 3 view classes end */
+
+/* The step 4 view classes start */
+.dg-fish .dg-fstep4 {
+    padding: $dg-column-gutter; 
+}
+/* The step 4 view classes end */
+
+/* The step 5 view classes start */
+.dg-fish .dg-fstep5 {
+    padding: $dg-column-gutter; 
+}
+/* The step 5 view classes end */
+
+/* The step 6 view classes start */
+.dg-fish .dg-fstep6 {
+    padding: $dg-column-gutter; 
+}
+/* The step 6 view classes end */
+
+/* The step 7 view classes start */
+.dg-fish .dg-fstep7 {
+    padding: $dg-column-gutter; 
+}
+/* The step 7 view classes end */
+
+/* The step 8 view classes start */
+.dg-fish .dg-fstep8 {
+    padding: $dg-column-gutter; 
+}
+
+.dg-fish .dg-button-subtitle {
+    text-align: center;
+    margin-top: -$column-gutter/2;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+#dg-footer-card-icons {
+    margin-top: rem-calc(-10);
+    margin-bottom: rem-calc(10);
+}
+/* The step 8 view classes end */
+
+/* The step 9 view classes start */
+.dg-fish .dg-fstep9 {
+    padding: $dg-column-gutter; 
+}
+
+.dg-fish .dg-success-icon {
+    //font-size: rem-calc(100);
+    //color: $success-color;
+    background: url("../img/success_small.png") 50% 50%;
+    width: rem-calc(70);
+    height: rem-calc(70);
+    // margin: auto;
+    margin-bottom: rem-calc(20);
+}
+/* The step 9 view classes end */
+
+
+

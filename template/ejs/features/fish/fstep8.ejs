@@ -1,0 +1,90 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu.ejs', this.content); %>
+</section>
+<section id="dg-fstep8-section" role="main" class="dg-fish scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-fstep8 large-12 medium-12 columns">
+            <form onsubmit="return false;" id="dg-payment-form">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <%== can.view.render('textInputEJS', this.form.attr('cardNumber') ); %>
+                    </div>
+                    <div class="large-12 columns" id="dg-footer-card-icons"></div>
+                </div>
+                <label><%= toUpper(getStr('D065')) %></label>
+                <div class="row">
+                    <div class="large-6 medium-6 small-6 columns">
+                        <select name="expMonth">
+                            <option value="Month" selected="selected"><%= getStr('D066') %></option>
+                            <option value="Jan">01- Jan</option>
+                            <option value="Feb">02 - Feb</option>
+                            <option value="Mar">03 - Mar</option>
+                            <option value="Apr">04 - Apr</option>
+                            <option value="May">05 - May</option>
+                            <option value="Jun">06 - Jun</option>
+                            <option value="Jul">07 - Jul</option>
+                            <option value="Aug">08 - Aug</option>
+                            <option value="Sep">09 - Sep</option>
+                            <option value="Oct">10 - Oct</option>
+                            <option value="Nov">11 - Nov</option>
+                            <option value="Dec">12 - Dec</option>                    
+                        </select>
+                    </div>
+                    <div class="large-6 medium-6 small-6 columns">
+                        <select class="styled-select" name="expYear">
+                           <option value="Year" selected="selected"><%= getStr('D067') %></option>
+                           <option value="2014">2014</option>
+                           <option value="2015">2015</option> 
+                           <option value="2016">2016</option>
+                           <option value="2017">2017</option>
+                           <option value="2018">2018</option>
+                           <option value="2019">2019</option>
+                           <option value="2020">2020</option>
+                           <option value="2021">2021</option>
+                           <option value="2022">2022</option>
+                           <option value="2023">2023</option>
+                           <option value="2024">2024</option>               
+                       </select>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="large-9 medium-8 columns">
+                        <%== can.view.render('textInputEJS', this.form.attr('fullName') ); %>
+                    </div>
+                    <div class="large-3 medium-4 columns">
+                        <%== can.view.render('textInputEJS', this.form.attr('cvv') ); %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="panel">
+                            <h4><%= getStr('D048') %></h4>
+                            <h1 id="dg-cost-title"><%= this.content.attr('total') %></h1>
+                            <p>Surcharge: <%= this.content.attr('surcharge') %></p>
+                        </div>
+                    </div>
+                </div>
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+                <div class="row">
+                    <div class="small-10 small-centered columns">
+                        <p class="dg-button-subtitle"><i class="fi-lock fi-size-medium"></i> <%= getStr('D068') %></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

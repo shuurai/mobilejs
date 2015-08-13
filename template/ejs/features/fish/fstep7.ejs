@@ -1,0 +1,48 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu.ejs', this.content); %>
+</section>
+<section id="dg-fstep7-section" role="main" class="dg-fish scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-fstep7 large-12 medium-12 columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <div class="dg-h4-label"><%= toUpper(getStr('D044')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('lastname')+' '+this.data.attr('firstname') %></div>
+                    
+                    <div class="dg-h4-label"><%= toUpper(getStr('D022')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('dob') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('DMOBILE')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('mobile') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D045')) %></div>
+                    <div class="dg-h3-value"><%= displayAddress(this.data.attr('address')) %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D046')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('durationLabel') %></div>
+
+                    <div class="dg-h4-label"><%= toUpper(getStr('D010')) %></div>
+                    <div class="dg-h3-value"><%= this.data.attr('totalAmountPayable') %></div>
+                </div>
+            </div>
+            <br/>
+            <form onsubmit="return false;">
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+            </form>
+        </div>
+    </div>
+</section>

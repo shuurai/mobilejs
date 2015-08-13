@@ -1,0 +1,30 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu'+(isLoggedIn()?'_auth':'')+'.ejs', this.content); %>
+</section>
+<section id="dg-contact-section" role="main" class="dg-home scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-contact large-12 medium-12 columns">
+            <h4>This application has been tested with popular mobile devices. However, older devices may not operate with the same functionality as newer models.</h4>
+            <h4>In case of difficulties, <a href="https://www.licence.nsw.gov.au/new/?FullSite=true">please use our full site</a> to complete your transaction.</h4>
+            <h4>Please send us an email if you would like to suggest an improvement.</h4><br/>
+
+            <form onsubmit="return false;">
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+            </form>
+        </div>
+    </div>
+</section>

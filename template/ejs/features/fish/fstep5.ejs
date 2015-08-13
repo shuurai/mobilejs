@@ -1,0 +1,43 @@
+<section id="dg-nav-canvas">
+    <%== can.view.render('topbarGuestEJS', this.content); %>
+    <%== can.view.render(baseURL+'ejs/features/common/menu.ejs', this.content); %>
+</section>
+<section id="dg-fstep5-section" role="main" class="dg-fish scroll-container dg-transition-page">
+    <div class="row">
+        <div class="dg-top-spacer"></div>
+        <%== can.view.render('pagetitleEJS', this.content); %>
+    </div>
+    <div class="row">
+        <!-- div class="large-3 medium-4 columns">
+            <div class="hide-for-small">
+                <div class="dg-sidebar">
+                    <section>
+                        <p>Back</p>
+                    </section>
+                </div>
+            </div>
+        </div -->
+        <div class="dg-fstep5 large-12 medium-12 columns">
+            <form onsubmit="return false;">               
+                <div class="row">
+                    <div class="large-12 columns">
+                        <%== can.view.render('dateInputEJS', this.form.attr('licenceDate') ); %>
+                    </div>
+                    <div class="large-12 columns">
+                        <%== can.view.render('selectInputEJS', this.form.attr('duration') ); %>
+                    </div>
+                </div>               
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="panel">
+                            <h4><%= getStr('D029') %></h4>
+                            <h1 id="dg-cost-title"><%= this.content.attr('cost') %></h1>
+                            <small id="dg-cost-subtitle"></small>
+                        </div>
+                    </div>
+                </div>
+                <%== can.view.render('submitButtonEJS', this.form.attr('submit') ); %>
+            </form>
+        </div>
+    </div>
+</section>

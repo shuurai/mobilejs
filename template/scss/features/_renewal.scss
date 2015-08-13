@@ -1,0 +1,94 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _renewal.scss
+Version: 1.0
+
+Description:
+CSS specific for the renewal screens. Please prefix with dg-renewal.
+*/
+
+/* Variables */
+
+/* The renewal feature top class */
+.dg-renewal {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-renewal .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+.dg-renewal .dg-form-button-subtitle {
+    text-align: center;
+    margin-top: -$column-gutter/2;
+    color: $primary-color;
+    font-weight: bold;
+}
+
+/* The step 0 view classes start */
+.dg-renewal .dg-rstep0 {
+    padding: $dg-column-gutter; 
+}
+
+.dg-rstep0 li h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* The step 0 view classes end */
+
+/* The step 1 view classes start */
+.dg-renewal .dg-rstep1 {
+    padding: $dg-column-gutter; 
+}
+/* The step 1 view classes end */
+
+/* The step 2 view classes start */
+.dg-renewal .dg-rstep2, .dg-renewal .dg-rstep2b {
+    padding: $dg-column-gutter; 
+}
+/* The step 2 view classes end */
+
+/* The step 3 view classes start */
+.dg-renewal .dg-rstep3, .dg-renewal .dg-rstep3a {
+    padding: $dg-column-gutter; 
+}
+/* The step 3 view classes end */
+
+/* The step 4 view classes start */
+.dg-renewal .dg-rstep4 {
+    padding: $dg-column-gutter; 
+}
+/* The step 4 view classes end */
+
+/* The step 5 view classes start */
+.dg-renewal .dg-rstep5 {
+    padding: $dg-column-gutter; 
+}
+/* The step 5 view classes end */
+
+/* The step 6 view classes start */
+.dg-renewal .dg-rstep6 {
+    padding: $dg-column-gutter; 
+}
+/* The step 6 view classes end */
+
+/* The step 7-10 view classes start */
+.dg-renewal .dg-rstep7, .dg-renewal .dg-rstep8, .dg-renewal .dg-rstep8a, .dg-renewal .dg-rstep8b, .dg-renewal .dg-rstep9, .dg-renewal .dg-rstep10 {
+    padding: $dg-column-gutter; 
+}
+/* The step 7-10 view classes end */
+
+.dg-renewal .dg-success-icon {
+    //font-size: rem-calc(100);
+    //color: $success-color;
+    background: url("../img/success_small.png") 50% 50%;
+    width: rem-calc(70);
+    height: rem-calc(70);
+    // margin: auto;
+    margin-bottom: rem-calc(20);
+}

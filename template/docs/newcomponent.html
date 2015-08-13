@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="OneGov">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <title>DG Web App - How To Add New Component</title>
+    <link href="../build/css/foundation-icons.min.css" rel="stylesheet">
+    <link href="../build/css/app.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
+    <script src="../vendor/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="top-bar docs-bar hide-for-small" data-topbar="">
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">DG Web App - How To</a></h1>
+                    </li>
+                </ul>
+
+                <section class="top-bar-section">
+                    <ul class="right">
+                        <li class="divider"></li>
+                        <li class="has-form">
+                            <a href="mailto:shane.di@finance.nsw.gov.au" class="small button">shane.di@finance.nsw.gov.au</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+            <nav class="tab-bar show-for-small">
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Documentation</h1>
+                </section>
+
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><a href="index.html" data-search="">Home</a></li>
+                    <li><label class="first">General</label></li>
+                    <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                    <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                    <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                    <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                    <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                    <li><a href="general.html#popups" data-search="">Popup</a></li>
+                    <li><a href="general.html#services" data-search="">API Services</a></li>
+                    <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                    <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                    <li><label class="first">How To</label></li>
+                    <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                    <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                    <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                    <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                    <li><label class="first">Validators</label></li>
+                    <li><a href="validators.html#example" data-search="">Example</a></li>
+                    <li><a href="validators.html#list" data-search="">List</a></li>
+                </ul>
+            </aside>
+            <a class="exit-off-canvas" href="#"></a>
+            <section role="main" class="dg-kitchen scroll-container">
+                <div class="row">
+                    <div class="large-3 medium-4 columns">
+                        <div class="hide-for-small">
+                            <div class="dg-sidebar">
+                                <h5><a href="index.html">Home</a></h5>
+                                <nav>
+                                    <ul class="side-nav">
+                                        <li class="heading">General</li>
+                                        <li><a href="general.html#requirements" data-search="">Requirements</a></li>
+                                        <li><a href="general.html#quickstart" data-search="">Quick Start</a></li>
+                                        <li><a href="general.html#stylerules" data-search="">Style Rules</a></li>
+                                        <li><a href="general.html#jsrules" data-search="">JS Rules</a></li>
+                                        <li><a href="general.html#templatesrules" data-search="">Templates Rules</a></li>
+                                        <li><a href="general.html#services" data-search="">API Services</a></li>
+                                        <li><a href="general.html#popups" data-search="">Popup</a></li>
+                                        <li><a href="general.html#helpers" data-search="">Helpers</a></li>
+                                        <li><a href="kitchen.html" data-search="">HTML Kitchen Sink</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">How To</li>
+                                        <li><a href="newfeature.html" data-search="">Add New Feature</a></li>
+                                        <li><a href="newcomponent.html" data-search="">Add New Component</a></li>
+                                        <li><a href="newtemplate.html" data-search="">Add New TPL/EJS</a></li>
+                                        <li><a href="newlibs.html" data-search="">Add 3RD Party Libs</a></li>
+                                        <li class="divider"></li>
+                                        <li class="heading">Validators</li>
+                                        <li><a href="validators.html#example" data-search="">Example</a></li>
+                                        <li><a href="validators.html#list" data-search="">List</a></li>
+                                    </ul>
+                                </nav>
+                                <section id="hint">
+                                    <h5>Hint</h5>
+                                    <p>...</p>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="large-9 medium-8 columns">
+                        <br/>
+                        <h1 id="kitchen-sink">How To <i class="fi-puzzle"></i></h1>
+                        <h3 class="subheader">What is a Component?<a id="newfeature"></a></h3>
+                        <p>A component in this DG Web App is simply a canJS <strong>`Control`</strong> built specifically for a particular user function. It can be a widget like the <strong>`auto_address`</strong> search input. It could also be a more behind the scene function like <strong>`page_slider`</strong>.</p>
+
+                        <div class="alert-box radius alert">This is not a canJS <strong>`component`</strong>!</div>
+
+                        <p>Basically, anything that can be reused (or placed as a global function in <strong>`common.js`</strong>) can be none the less built as a component. The purpose is to allow cleaner management of things that are more complicated for better maintainability and extensibility.</p>
+                        <h3 class="subheader">Add New Component</h3>
+                        <p>
+                            Please follow the steps below to understand and learn the process of adding a new standard <strong>`js/component`</strong> component and how to use it.
+                        </p>
+                        <h5>Snake Game Component</h5>
+                        <ol>
+                            <li>Create a file named correctly <strong>(`snake_game.js`)</strong> after your component name under <strong>`js/components/`</strong></li>
+                            <li>
+                                <p>Place in the empty component structure as follows:</p>
+                                <blockquote>
+                                    <code class="language-javascript">_global['_components']['SnakeGame'] = {
+    id: 'SnakeGame',
+    instantiate: function () {
+        initDictionary(snakeGameStrEN);
+        this.Control = can.Control({
+            init: function () {
+                // Init the functionalities here    
+            }
+        });
+    },
+    create: function (str, element) {
+        return new this.Control(element, { errorMessage: str });
+    }
+};</code>
+                                </blockquote>
+                                <p>Please note the naming of the component <strong>`SnakeGame`</strong> as this is very important for lazy loading by the DG Web App.</p>
+                            </li>
+                            <li>Do what you have to do to build this control just like any other canJS controls that you build.</li>
+                            <li><p>If you need a string file to be attached, then simply create a translation file just like how features are done and have it suffixed with <strong>`_str.en.js`</strong>. Use the right naming of the dictionary for loading. <strong>(`snakeGameStrEN`)</strong> Ideally, try to prefix the keys with a different/unique letter to this component so that it does not interfere with other files. (`SNAKE` would be a good choice.)</p><p>If you take a look at <strong>`popup_str.en.js`</strong>, you can see that keys are prefixed with <strong>`POP`</strong>.</p></li>
+                            <li>Components are usually shared functionality that can be used anywhere and anytime. Also, they are compiled all in to one file <strong>`js/components/components.min.js`</strong> to reduce file count. Edit <strong>`Gruntfile.js`</strong> and include the component file under the `'js/components/components.min.js'` key block. Remember, always include the string file first!</li>
+                            <li>
+                                <p>Component controls are instantiated automatically so that they are loaded in memory ready for use. To use this component:</p>
+                                <blockquote>
+                                    <code class="language-javascript">_c("SnakeGame").create("I AM SNAKE!", someDivHolder);</code> 
+                                </blockquote>
+                            </li>
+                            <li>Done!</li>
+                        </ol>
+                        <p>Some components like the popup component is customized. Its <strong>`create()`</strong> function uses a singleton pattern.</p>
+                    </div>
+                </div>
+                <div class="zurb-footer-bottom">
+                    <div class="row">
+                        <div class="large-12 medium-8 columns">
+                            <p class="copyright">© 2013‐2014 DG, GLS. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <script src="../vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../vendor/foundation/js/foundation.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    
+</body>
+</html>

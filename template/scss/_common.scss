@@ -1,0 +1,735 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _common.scss
+Version: 1.0
+
+Description:
+This is the common css stuff for things that needs to be shared across the site.
+*/
+
+
+//
+// DG SETTINGS
+//
+
+$dg-sub-header-color: lighten($body-font-color, 30%);
+$dg-divider-on-white-color: #dddddd;
+$dg-backing-light-color: #fafafa;
+$dg-hover-opacity: 0.8;
+$dg-min-height: rem-calc(480);
+$dg-column-gutter: $column-gutter / 2;
+$dg-disabled-color: $input-disabled-bg;
+
+$dg-menu-height: rem-calc(200);
+$dg-transition-speed: 0.30s;
+
+// Foundation overrides
+button, .button {
+    text-transform: $button-text-transform;
+    outline-color: transparent;
+    outline-style: none;
+}
+
+input {
+    font-weight: bold;
+}
+
+// Checkbox label
+label.dg-check-label, label.dg-radio-label {
+    display: inline;
+    padding-left: rem-calc(10);
+}
+
+// Error class for input
+input.error, select.error {
+    border-color: lighten($alert-color, 30%);
+    color: $alert-color;
+    border-width: 2px;
+}
+
+select.error {
+    margin-bottom: 0;
+}
+
+small.error {
+    border-color: $alert-color;
+    background-color: lighten($alert-color, 30%);
+    color: darken($alert-color, 10%);
+}
+
+/* Feature Loading */
+.dg-feature-loading {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: $dg-backing-light-color;
+    opacity: 0.2;
+    padding-top: 50%;
+    margin: 0;
+}
+
+/* Password Strength Indicator */
+.dg-password-block {
+    height: rem-calc(16);
+}
+
+.dg-password-empty {
+    margin-top: -1rem;
+}
+
+.dg-password-entered {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.dg-password-text {
+    color: #666;
+    float: right;
+    text-align: left;
+    padding-left: rem-calc(10);
+    width: 35%;
+    margin-top: -0.9rem;
+    font-size: rem-calc(14);
+    font-weight: bold;
+}
+
+// Only for password due to indicator
+input.dg-password-input {
+
+}
+
+.dg-password {
+    transition: all $dg-transition-speed ease-out;
+    display: block;
+    height: rem-calc(16);
+    width: 65%;
+    padding-top: rem-calc(1);
+    text-align: center;
+    font-size: rem-calc(12);
+    font-weight: bold;
+}
+
+.dg-password-vstrong {
+    color: #E3F8C9;
+    //border: 2px solid #333;
+    border: 2px solid #99CF53;
+    background-color: #98DD31;
+    background: linear-gradient(to right, #98DD31 50%, #FAFAFA 50%);
+    background-position: left bottom;
+    background-size: 200% 100%;
+}
+
+.dg-password-strong {
+    color: #FCF476;
+    border: 2px solid #CCC443;
+    //border: 2px solid #666;
+    background-color: #d8ce26;
+    background: linear-gradient(to right, #d8ce26 50%, #FEFFE2 50%);
+    background-position: left 20% bottom;
+    background-size: 200% 100%;
+}
+
+.dg-password-average {
+    color: #FFEEA8;
+    border: 2px solid #E7A300;
+    //border: 2px solid #666;
+    background-color: #ffa800;
+    background: linear-gradient(to right, #ffa800 50%, #FFF9E7 50%);
+    background-position: left 40% bottom;
+    background-size: 200% 100%;
+}
+
+.dg-password-bad {
+    color: #EB9E61;
+    border: 2px solid #AF5913;
+    //border: 2px solid #666;
+    background-color: #c26112;
+    background: linear-gradient(to right, #c26112 50%, #FFF3DF 50%);
+    background-position: left 60% bottom;
+    background-size: 200% 100%;
+}
+
+.dg-password-vbad {
+    color: #CC7979;
+    border: 2px solid #B93737;
+    //border: 2px solid #666;
+    background-color: #d40000;
+    background: linear-gradient(to right, #d40000 50%, #FFE2E2 50%);
+    background-position: left 80% bottom;
+    background-size: 200% 100%;
+}
+
+.dg-password-none {
+    color: #fff;
+    border: 2px solid #fff;
+    //border: 2px solid #666;
+    background-color: #FFF;
+    background: linear-gradient(to right, #FFF 50%, #FFF 50%);
+    background-position: left 100% bottom;
+    background-size: 200% 100%;
+    
+}
+
+// Top Bar For Small
+.dg-sticky-top {
+    @extend .fixed;
+}
+
+// Adds a spacer for small when top bar sticks
+.dg-top-spacer {
+    display: block;
+    width: 100%;
+    height: $tabbar-height;
+}
+
+// Top Bar Logo
+.dg-topbar-logo {
+    background: url("../img/logo_text_small.png") 50% 50% no-repeat;
+    height: $tabbar-height;
+    display: block;
+    margin: auto;
+}
+
+// Search Bar
+.dg-searchbar {
+    padding-top: $dg-column-gutter / 2;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: darken($dg-divider-on-white-color, 40%);
+    height: rem-calc(54);
+}
+
+.dg-searchbar-input-wrapper {
+    padding-left: 0;
+}
+
+// Search Bar Button
+a.dg-searchbar-button {
+    margin-bottom: 0;
+}
+
+// Search Bar Input
+input.dg-searchbar-input {
+    margin-bottom: 0;
+    padding-left: rem-calc(36);
+    height: rem-calc(39);
+    border-color: darken($dg-divider-on-white-color, 20%);
+    font-size: $h5-font-size;
+    background-image: url('../img/mag_small.png');
+    background-position: rem-calc(8) 50%;
+    background-repeat: no-repeat;
+}
+
+input.dg-searchbar-input:focus {
+    padding-left: rem-calc(36);
+    height: rem-calc(39);
+    font-size: $h5-font-size;
+    background-image: url('../img/mag_focus_small.png');
+    background-position: rem-calc(8) 50%;
+    background-repeat: no-repeat;
+}
+
+// Custom Left Small for Custom Icons
+.dg-left-small {
+    width: $tabbar-height;
+    height: $tabbar-height;
+    line-height: $tabbar-height;
+    position: absolute;
+    padding: rem-calc(4 0 0 15);
+    top: 0;
+    left: 0;
+    border-right: $tabbar-right-section-border;
+}
+
+// Back Icon
+.dg-back-icon {
+    display: block;
+    padding: 0;
+    color: $tabbar-menu-icon-color;
+    position: relative;
+}
+
+// Back Icon a
+.dg-left-small a, .dg-left-small a:active {
+    color: $tabbar-menu-icon-color;
+}
+
+// Back Icon a hover
+.dg-left-small a:hover {
+    color: $tabbar-menu-icon-hover;
+}
+
+// Back Icon Span
+.dg-back-icon span {
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 1rem;
+    line-height: 1;
+    top: rem-calc(11);
+    left: rem-calc(45);
+}
+
+// Custom Right Small for Custom Icons
+.dg-right-small {
+    width: $tabbar-height;
+    height: $tabbar-height;
+    line-height: $tabbar-height;
+    position: absolute;
+    padding: rem-calc(4 0 0 15);
+    top: 0;
+    right: 0;
+    border-left: $tabbar-right-section-border;
+}
+
+// Right Icon
+.dg-right-icon {
+    display: block;
+    padding: 0;
+    color: $tabbar-menu-icon-color;
+    position: relative;
+}
+
+// Right Icon a
+.dg-right-small a, .dg-right-small a:active {
+    color: $tabbar-menu-icon-color;
+}
+
+// Right Icon a hover
+.dg-right-small a:hover {
+    color: $tabbar-menu-icon-hover;
+}
+
+// Right Icon Span
+.dg-right-icon span {
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 1rem;
+    line-height: 1;
+    top: rem-calc(11);
+    right: rem-calc(45);
+}
+
+// Waratah logo icon
+.dg-waratah-logo {
+    background: url("../img/home/waratah_small.png") 50% 50% no-repeat;
+    width: rem-calc(40);
+    height: rem-calc(24);
+    padding: 0;
+    position: relative;
+    display: block;
+}
+
+/* CUSTOM FI ICONS */
+
+/* Icon Colors */
+.fi-green {
+    color: $success-color;
+}
+
+.fi-red {
+    color: $alert-color;
+}
+
+.fi-orange {
+    color: #FFA500;
+}
+
+.fi-grey {
+    color: #666666;
+}
+
+.dg-fi-custom-icon {
+    display: block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+// Example custom icon of profile, ideal icon size, 50px or 100px squares
+.dg-fi-custom-profile {
+    @extend .dg-fi-custom-icon;
+
+    background-image: url('../img/icons/icon_profile_64.png');
+}
+
+/* ICONS END */
+
+/* Page Transition */
+.dg-transition-page {
+    display: block;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ 
+ // Transitions for Pages
+.dg-transition-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.dg-transition-center {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.dg-transition-right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.dg-transition {
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: all $dg-transition-speed ease-out;
+    -moz-transition: all $dg-transition-speed ease-out;
+    -ms-transition: all $dg-transition-speed ease-out;
+    -o-transition: all $dg-transition-speed ease-out;
+    transition: all $dg-transition-speed ease-out;
+}
+
+/* Page Title */
+.dg-pagetitle {
+    padding-left: $dg-column-gutter;
+    padding-right: $dg-column-gutter;
+    padding-top: $dg-column-gutter * 1.2;
+    padding-bottom: 0;
+    border-bottom: 1px solid $dg-divider-on-white-color;
+}
+
+.dg-pagetitle h2.dg-maintitle {
+    color: $primary-color;
+    margin-top: rem-calc(-10);
+}
+
+.dg-pagetitle h4.dg-subtitle {
+    color: $dg-sub-header-color;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: rem-calc(1);
+}
+
+/* Form Things - Input Clear Button */
+.dg-input-clear-button {
+    position: absolute;
+    top: rem-calc(34);
+    right: rem-calc(23);
+    opacity: 0.2;
+}
+
+.dg-input-clear-button:hover {
+    opacity: 0.1;
+    cursor: hand;
+}
+
+.dg-input-clear-button-columned {
+    top: rem-calc(7);
+    right: rem-calc(8);
+}
+
+.dg-info-icon {
+    position: absolute;
+    right: $dg-column-gutter;
+    color: lighten($dg-sub-header-color, 30%);
+    margin-top: rem-calc(-2);
+    z-index: 101;
+    line-height: $form-label-line-height;
+}
+
+.dg-info-text {
+    position: absolute;
+    right: $dg-column-gutter;
+    color: $alert-color;
+    font-size: $form-label-font-size;
+    // margin-top: rem-calc(-2);
+    z-index: 101;
+    line-height: $form-label-line-height;
+}
+
+.dg-styled-radio {
+    // Nothing yet
+}
+
+/* Fading Util Classes */
+.dg-css-fade-in {
+   opacity: 1;
+   transition: opacity .33s ease-in-out;
+   -moz-transition: opacity .33s ease-in-out;
+   -webkit-transition: opacity .33s ease-in-out;
+   -ms-transition: opacity .33s ease-in-out;
+}
+
+.dg-css-fade-out {
+   opacity: 0;
+   transition: opacity .33s ease-in-out;
+   -moz-transition: opacity .33s ease-in-out;
+   -webkit-transition: opacity .33s ease-in-out;
+   -ms-transition: opacity .33s ease-in-out;
+}
+
+.dg-css-hide { opacity: 0; }
+.dg-css-hidden { opacity: 0; } 
+
+/* DG Name Value Pairs */
+.dg-h4-label {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: $dg-sub-header-color;
+    font-size: rem-calc(18);
+    line-height: $form-label-line-height;
+}
+
+.dg-h3-value {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: rem-calc(22);
+    margin-bottom: 1rem;
+}
+
+/* Special Note H1 Block */
+#dg-cost-title {
+    font-size: rem-calc(60);
+    font-weight: bold;
+}
+
+/* Action Button for mobile */
+
+.dg-button-panel {
+    @extend .panel;
+    border: 1px solid $dg-divider-on-white-color;
+    background-color: $dg-backing-light-color;
+    font-size: rem-calc(14);
+    padding: $panel-padding/2;
+    background-image: url('../img/home/menu_arrow_small.png');
+    background-position: 97% 50%;
+    background-repeat: no-repeat;
+    margin-bottom: 1rem;
+}
+
+.dg-button-panel .dg-button-left-icon {
+    float: left;
+    position: relative;
+    width: rem-calc(25);
+    padding: rem-calc(10 30 0 20);
+}
+
+.dg-button-panel .dg-button-title {
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.dg-button-panel .dg-button-subtitle {
+    margin-bottom: rem-calc(3);
+    margin-top: 0;
+    color: $dg-sub-header-color;
+}
+
+.dg-button-panel:hover {
+    background-color: darken($dg-backing-light-color, 5%);
+}
+
+.dg-button-panel:hover .dg-button-subtitle {
+    color: $primary-color;
+}
+
+/* Select Mobile Lister */
+.dg-select-block {
+}
+
+.dg-select-block h4 {
+    padding-left: $dg-column-gutter;
+    padding-top: rem-calc(7);
+    color: $primary-color;
+}
+
+.dg-select-lister {
+    list-style-type: none;
+    background-color: darken($dg-backing-light-color, 2%);
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+.dg-select-lister li {
+    font-size: $h4-font-size;
+    color: $body-font-color;
+    padding: $dg-column-gutter;
+    padding-left: $column-gutter;
+    padding-right: $column-gutter;
+    border-bottom: 1px solid $dg-divider-on-white-color;
+
+    background-image: url('../img/home/menu_arrow_small.png');
+    background-position: 97% 50%;
+    background-repeat: no-repeat;
+}
+
+.dg-select-lister li a {
+    font-size: $h4-font-size;
+    color: $body-font-color;
+}
+
+.dg-select-lister li:hover  {
+    background-color: darken($dg-backing-light-color, 5%);
+    cursor: hand;
+}
+
+/* Spinner for Submit Button */
+input.dg-submit-spinner, input.dg-submit-spinner:hover, input.dg-submit-spinner:active {
+    -webkit-transition:background-color 0.3s;
+    -moz-transition:background-color 0.3s;
+    -ms-transition:background-color 0.3s;
+    transition:background-color 0.3s;
+    //padding: 16px 0 14px;
+    background-color: $dg-disabled-color;
+    background-image: url("../img/square_spinner.gif");
+    background-repeat: no-repeat;
+    background-position: rem-calc(20);
+    /* opacity: $button-disabled-opacity; */
+}
+
+span.dg-square-spinner {
+    background-image: url("../img/square_spinner.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: rem-calc(31);
+    height: rem-calc(31);
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+/* Address QAS */
+#dg-qas-list a {
+    font-size: rem-calc(18);
+}
+
+/* Credit Cards */
+span.mastercard {
+    width: rem-calc(64);
+    height: rem-calc(48);
+    display: inline-block;
+    background:url(../img/mastercard.png) no-repeat 0 50%;
+}
+		
+span.visa {
+    width: rem-calc(64);
+    height: rem-calc(48);	
+    display: inline-block;
+    background: url(../img/visa.png) no-repeat 0 50%;
+}
+
+span.amex {
+    width: rem-calc(64);
+    height: rem-calc(48);	
+    display: inline-block;
+    background: url(../img/amex.png) no-repeat 0 50%;
+}
+
+span.diners {
+    width: rem-calc(64);
+    height: rem-calc(48);	
+    display: inline-block;
+    background: url(../img/diners.png) no-repeat 0 50%;
+}
+
+span.mastercard.small {
+    width: rem-calc(40);
+    height: rem-calc(30);
+    display: inline-block;
+    background:url(../img/mastercard_small.png) no-repeat 0 50%;
+}
+        
+span.visa.small {
+    width: rem-calc(40);
+    height: rem-calc(30);   
+    display: inline-block;
+    background: url(../img/visa_small.png) no-repeat 0 50%;
+}
+
+span.amex.small {
+    width: rem-calc(40);
+    height: rem-calc(30);   
+    display: inline-block;
+    background: url(../img/amex_small.png) no-repeat 0 50%;
+}
+
+span.diners.small {
+    width: rem-calc(40);
+    height: rem-calc(30);   
+    display: inline-block;
+    background: url(../img/diners_small.png) no-repeat 0 50%;
+}
+
+/* Generic Popup Related */
+.reveal-modal {
+    // background: none;
+    // box-shadow: none;
+    // border: none;
+    // padding: 0;
+}
+
+.dg-popup-wrapper {
+    // position: absolute;
+    // width: 100%;
+
+    background-color: $dg-backing-light-color;
+    padding: $reveal-modal-padding;
+
+    -webkit-border-radius: $reveal-radius;
+    -moz-border-radius: $reveal-radius;
+    border-radius: $reveal-radius;
+}
+
+.dg-popup-wrapper .close-reveal-modal {
+    top: $reveal-close-top;
+    right: $reveal-close-side;
+    font-size: $reveal-close-font-size;
+    cursor: hand;
+}
+
+.dg-popup-button-left {
+    @extend .columns;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dg-popup-button-right {
+    @extend .columns;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Medium Up Medias */
+@media #{$medium-up} { 
+    .dg-popup-button-left {
+        @extend .columns;
+        padding-left: 0;
+        padding-right: $dg-column-gutter / 2;
+    }
+
+    .dg-popup-button-right {
+        @extend .columns;
+        padding-left: $dg-column-gutter / 2;
+        padding-right: 0;
+    }
+}

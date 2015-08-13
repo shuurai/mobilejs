@@ -1,0 +1,46 @@
+/*
+DG - GLS www.licence.nsw.gov.au
+This is a private project and should be copied, modified, 
+distributed without consent of GLS.
+There are submodules and libraries used that may of be MIT, GP
+and Lesser that are not affiliated in anyway with DG.
+
+Filename: _setup.scss
+Version: 1.0
+
+Description:
+CSS specific for the setup screens. Please prefix with dg-setup.
+*/
+
+/* Variables */
+
+/* The setup feature top class */
+.dg-setup {}
+
+/* Sidebar is for desktop view only at the moment shared by all dg-home */
+.dg-setup .dg-sidebar {
+    background-color: $dg-backing-light-color;
+    padding: $dg-column-gutter;
+}
+
+/* The register view classes start */
+.dg-setup .dg-register, .dg-setup .dg-register2, .dg-setup .dg-register3 {
+    padding: $dg-column-gutter; 
+}
+/* The register view classes end */
+
+/* The login view classes start */
+.dg-setup .dg-login, .dg-setup .dg-forgot, .dg-setup .dg-resetpassword {
+    padding: $dg-column-gutter;
+}
+/* The login view classes end */
+
+.dg-setup .dg-success-icon {
+    //font-size: rem-calc(100);
+    //color: $success-color;
+    background: url("../img/success_small.png") 50% 50%;
+    width: rem-calc(70);
+    height: rem-calc(70);
+    // margin: auto;
+    margin-bottom: rem-calc(20);
+}
